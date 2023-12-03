@@ -1,3 +1,22 @@
+:root{
+  --text-color: #546449ff;
+  --title-color: ;
+  --green-color: #A8C929ff;;
+  --green-color100: ;
+  --green-color300: ;
+  --yellow-color:#FFE009ff ;
+  --yellow-color100: ;
+  --yellow-color300: ;
+  --blue-color:  #4BC8EBff;
+  --blue-color100: ;
+  --blue-color300: ;
+  --background-color:rgb(227, 234, 209) ;
+}
+
+* {
+  font-family: 'Nunito', sans-serif;
+
+}
 .App {
   text-align: center;
 }
