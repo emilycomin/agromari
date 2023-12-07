@@ -8,7 +8,7 @@
 }
 
 .primary-color{
-    color: var(--dark-slate-gray);
+    color: #fff;
 }
 .bg-primary-color{
     background-color: var(--yellow-green);

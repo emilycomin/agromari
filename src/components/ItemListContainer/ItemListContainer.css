@@ -8,3 +8,17 @@ body
     height: 250px;
     width: 400px;
 }
+
+.primary-color{
+    color: var(--dark-slate-gray);
+}
+.bg-primary-color, .btn-primary-color{
+    background-color: var(--yellow-green);
+}
+
+.bg-secundary-color{
+    background-color: var(--mikado-yellow);
+}
+.terciary-color{
+    color: #ffff;
+}
