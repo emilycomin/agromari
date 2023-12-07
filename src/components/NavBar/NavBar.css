@@ -1,0 +1,23 @@
+:root {
+    --vanilla: #FCF5B5ff;
+    --yellow-green: #A4C735ff;
+    --mikado-yellow: #FAC424ff;
+    --dark-slate-gray: #26454Bff;
+    --dark-slate-gray100:#396871 ;
+    --fulvous: #E98719ff;
+}
+
+.primary-color{
+    color: var(--dark-slate-gray);
+}
+.bg-primary-color{
+    background-color: var(--yellow-green);
+}
+
+.bg-secundary-color{
+    background-color: var(--mikado-yellow);
+}
+
+#navbar :hover{
+    color: var(--dark-slate-gray100);
+}

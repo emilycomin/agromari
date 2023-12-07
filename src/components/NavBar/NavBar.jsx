@@ -1,19 +1,24 @@
 import Logo from "../../img/logos/logo simples sem fundo.png";
 import "bootstrap/js/dist/tab";
 import "bootstrap/js/dist/dropdown";
+import "../NavBar/NavBar.css";
+import CartWidjet from "../CartWidjet/CartWidjet";
 
 function NavBar() {
   return (
-    <nav class="navbar navbar-expand-lg bg-warning">
-      <ul class="nav nav-pills bg-warning justify-content-center fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+      <a href="#">
+        <img src={Logo} alt="" height={50} width={100} />
+      </a>
+      <ul class="nav nav-pills fixed-top p-2 d-flex justify-content-center">
         <li class="nav-item">
-          <a class="nav-link active bg-info" aria-current="page" href="#">
-            HOME
+          <a class="nav-link active bg-warning" aria-current="page" href="#">
+            Home
           </a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown bg-primary-color text-primary-color">
           <a
-            class="nav-link dropdown-toggle"
+            class="nav-link dropdown-toggle primary-color"
             data-bs-toggle="dropdown"
             href="#"
             role="button"
@@ -22,36 +27,29 @@ function NavBar() {
             Produtos
           </a>
           <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#">
+            <li class="text-color">
+              <a class="dropdown-item primary-color" href="#">
                 Rações
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item primary-color" href="#">
                 Acessórios
               </a>
             </li>
             <li>
-              <a class="dropdown-item" href="#">
+              <a class="dropdown-item primary-color" href="#">
                 Produtos Veterniários
               </a>
             </li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link primary-color" href="#">
             Contato
           </a>
         </li>
-        <a href="#" class="float-end">
-          <img
-            width="50"
-            height="50"
-            src="https://img.icons8.com/stickers/100/000000/shop--v1.png"
-            alt="shop--v1"
-          />
-        </a>
+        <CartWidjet />
       </ul>
     </nav>
   );

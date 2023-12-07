@@ -1,0 +1,10 @@
+body 
+{
+    display: flex;
+    flex-direction: row;
+}
+.card{
+    display: flex;
+    height: 250px;
+    width: 400px;
+}
