@@ -22,7 +22,7 @@ export default function ItemCount({ stock, initial, onAdd }) {
           <input
             type="text"
             className="quantidadeProduto"
-            value={initial}
+            value={count}
             max={stock}
             id=""
           />
