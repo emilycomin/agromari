@@ -3,22 +3,30 @@ import "bootstrap/js/dist/tab";
 import "bootstrap/js/dist/dropdown";
 import "../NavBar/NavBar.css";
 import CartWidjet from "../CartWidjet/CartWidjet";
+import ItemCount from "../ItemCount/ItemCount";
 
 function NavBar() {
   return (
-    <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+    <nav
+      className="navbar navbar-expand-lg p-2 fixed-top bg-primary-color d-flex justify-content-between"
+      id="navbar"
+    >
       <a href="#">
-        <img src={Logo} alt="" height={50} width={100} />
+        <img src={Logo} alt="" height={50} width={100} className="p-1" />
       </a>
-      <ul class="nav nav-pills fixed-top p-2 d-flex justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active bg-warning" aria-current="page" href="#">
+      <ul className="nav nav-pills">
+        <li className="nav-item">
+          <a
+            className="nav-link active bg-warning "
+            aria-current="page"
+            href="#"
+          >
             Home
           </a>
         </li>
-        <li class="nav-item dropdown bg-primary-color text-primary-color">
+        <li className="nav-item dropdown bg-primary-color text-primary-color">
           <a
-            class="nav-link dropdown-toggle primary-color"
+            className="nav-link dropdown-toggle primary-color"
             data-bs-toggle="dropdown"
             href="#"
             role="button"
@@ -26,31 +34,33 @@ function NavBar() {
           >
             Produtos
           </a>
-          <ul class="dropdown-menu">
-            <li class="text-color">
-              <a class="dropdown-item primary-color" href="#">
+          <ul className="dropdown-menu">
+            <li className="text-color">
+              <a className="dropdown-item primary-color" href="#">
                 Rações
               </a>
             </li>
             <li>
-              <a class="dropdown-item primary-color" href="#">
+              <a className="dropdown-item primary-color" href="#">
                 Acessórios
               </a>
             </li>
             <li>
-              <a class="dropdown-item primary-color" href="#">
+              <a className="dropdown-item primary-color" href="#">
                 Produtos Veterniários
               </a>
             </li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link primary-color" href="#">
+        <li className="nav-item">
+          <a className="nav-link primary-color" href="#">
             Contato
           </a>
         </li>
-        <CartWidjet />
       </ul>
+      <ItemCount />
+      {/* <div>{count}</div> */}
+      <CartWidjet />
     </nav>
   );
 }

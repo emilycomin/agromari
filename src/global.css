@@ -1,0 +1,36 @@
+:root {
+  --vanilla: #fcf5b5ff;
+  --yellow-green: #a4c735ff;
+  --mikado-yellow: #fac424ff;
+  --dark-slate-gray: #26454bff;
+  --dark-slate-gray100: #396871;
+  --fulvous: #e98719ff;
+  --background-color: #fbf4e1;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  border-sizing: border-box;
+}
+.ContentCards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.primary-color {
+  color: var(--dark-slate-gray);
+}
+.bg-primary-color {
+  background-color: var(--yellow-green);
+}
+
+.bg-secundary-color {
+  background-color: var(--mikado-yellow);
+}
+body {
+  background-color: var(--background-color);
+}

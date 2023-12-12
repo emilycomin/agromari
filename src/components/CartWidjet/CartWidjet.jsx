@@ -1,7 +1,7 @@
 export default function CartWidjet() {
   return (
     <div>
-      <a href="#" class="float-end">
+      <a href="#" className="float-end">
         <img
           width="50"
           height="50"
