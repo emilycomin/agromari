@@ -1,5 +1,6 @@
 import React from "react";
 import "./ItemListContainer.css";
+import ItemCount from "../ItemCount/ItemCount";
 
 function ItemListContainer(props) {
   return (
@@ -18,8 +19,8 @@ function ItemListContainer(props) {
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </p>
-        <button> Adicionar ao carrinho</button>
       </div>
+      <ItemCount stock={3} initial={1} />
     </div>
   );
 }
