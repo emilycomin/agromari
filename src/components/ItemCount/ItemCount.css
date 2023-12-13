@@ -1,0 +1,15 @@
+.botoesCarrinho{
+    display: flex;
+}
+.plusMinusButton{
+    display: flex;
+    flex-direction: column;
+}
+
+.item{
+    width: 50px;
+}
+
+.cart{
+    border: 1px red solid;
+}

@@ -1,3 +1,3 @@
-export default function Button(props) {
-  return <button onClick={props.event}>{props.text}</button>;
+export default function Button({ event, text }) {
+  return <button onClick={event}>{text}</button>;
 }

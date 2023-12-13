@@ -1,7 +1,10 @@
 .card{
+    margin-bottom: 2rem;
     display: flex;
     height: 250px;
     width: 400px;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .primary-color{

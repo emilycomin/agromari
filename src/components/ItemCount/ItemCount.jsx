@@ -1,25 +1,45 @@
 import { useState } from "react";
 import Button from "../ButtonCart/ButtonCart";
+import "./ItemCount.css";
 // resolver problema dos números.... tem que acrescentar até o estoque
 // e diminuir até 1
-export default function ItemCount({ stock, initial }) {
-  const [count, setCount] = useState(1);
 
+export default function ItemCount({ stock, initial }) {
+  //usando o estado para modificar o value do input pelos botões
+  const [count, setCount] = useState(initial);
+
+  // para somar ou diminuir os botões do produto
   function addProduto() {
-    setCount(count + 1);
+    if (count < stock) {
+      setCount(count + 1);
+    }
   }
+
   function tirarProduto() {
-    setCount(count - 1);
+    if (count > 1) {
+      setCount(count - 1);
+    }
   }
+  function addOnCart() {
+    console.log(count);
+  }
+  //aqui dá pra fazer mais um função para adicionar o
+  //produto no carrinho e chamar ela no botão do cart separadamente.
 
   return (
     <div>
-      <div className="BotõesCarrinho">
-        <Button event={addProduto} text="+" />
-        <input type="text" value={count} max={stock} />
-        <Button event={tirarProduto} text="-" />
+      <div className="botoesCarrinho">
+        <input type="text" value={count} />
+        <div className="plusMinusButton">
+          <Button className="item" event={addProduto} text="+" />
+          <Button className="item" event={tirarProduto} text="-" />
+        </div>
       </div>
-      <Button text="Adicionar ao carrinho" />
+      <Button
+        className="cart"
+        onClick={addOnCart}
+        text="Adicionar ao carrinho"
+      />
     </div>
   );
 }

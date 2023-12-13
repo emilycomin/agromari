@@ -1,16 +1,17 @@
 import React from "react";
 import "./ItemListContainer.css";
 import ItemCount from "../ItemCount/ItemCount";
+import Images from "../../img/Racoes/0002.jpg";
 
 function ItemListContainer(props) {
   return (
     <div className="card">
       <img
-        src="../../img/Racoes/0002.jpg"
+        src={Images}
         className="align-self-center"
         alt=""
-        height={150}
-        width={100}
+        height={100}
+        width={50}
       />
       <div className="card-body">
         <h5 className="card-title">{props.name}</h5>
