@@ -1,6 +1,6 @@
 :root {
     --vanilla: #FCF5B5ff;
-    --yellow-green: #A4C735ff;
+    --yellow-green: #a4c735;
     --mikado-yellow: #FAC424ff;
     --dark-slate-gray: #26454Bff;
     --dark-slate-gray100:#396871 ;
@@ -10,14 +10,22 @@
 .primary-color{
     color: #fff;
 }
+.secondary-color{
+    color: var(--vanilla);
+}
+.nav-link{
+    color: var(--dark-slate-gray);
+}
+.nav-link:hover{
+    color: var(--vanilla);
+}
 .bg-primary-color{
     background-color: var(--yellow-green);
 }
-
-.bg-secundary-color{
-    background-color: var(--mikado-yellow);
+.dropdown-menu{
+    background-color: var(--yellow-green);
 }
-
-#navbar :hover{
-    color: var(--dark-slate-gray100);
+.dropdown-item:hover{
+    color: var(--vanilla);
+    background-color: var(--yellow-green);
 }

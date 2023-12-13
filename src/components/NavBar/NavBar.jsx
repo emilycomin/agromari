@@ -1,66 +1,87 @@
 import Logo from "../../img/logos/logo simples sem fundo.png";
 import "bootstrap/js/dist/tab";
 import "bootstrap/js/dist/dropdown";
+import "bootstrap/js/dist/collapse";
 import "../NavBar/NavBar.css";
 import CartWidjet from "../CartWidjet/CartWidjet";
-import ItemCount from "../ItemCount/ItemCount";
+import { List } from "@phosphor-icons/react";
 
 function NavBar() {
   return (
     <nav
-      className="navbar navbar-expand-lg p-2 fixed-top bg-primary-color d-flex justify-content-between"
+      className="navbar navbar-expand-lg fixed-top bg-primary-color"
       id="navbar"
     >
-      <a href="#">
-        <img src={Logo} alt="" height={50} width={100} className="p-1" />
-      </a>
-      <ul className="nav nav-pills">
-        <li className="nav-item">
-          <a
-            className="nav-link active bg-warning "
-            aria-current="page"
-            href="#"
-          >
-            Home
-          </a>
-        </li>
-        <li className="nav-item dropdown bg-primary-color text-primary-color">
-          <a
-            className="nav-link dropdown-toggle primary-color"
-            data-bs-toggle="dropdown"
-            href="#"
-            role="button"
-            aria-expanded="false"
-          >
-            Produtos
-          </a>
-          <ul className="dropdown-menu">
-            <li className="text-color">
-              <a className="dropdown-item primary-color" href="#">
-                Rações
+      <div className="container py-1">
+        <a href="#">
+          <img src={Logo} alt="" height={50} width={100} />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Alterna navegação"
+        >
+          <span class="navbar-toggler-icon">
+            <List size={32} />
+          </span>
+        </button>
+        <div
+          className="collapse navbar-collapse d-flex justify-content-around"
+          id="navbarNavAltMarkup"
+        >
+          <ul className="nav nav-tabs">
+            <li className="nav-item">
+              <a
+                className="nav-link active border-bottom-0"
+                style={{ backgroundColor: "#A4C735ff" }}
+                aria-current="page"
+                href="#"
+              >
+                Home
               </a>
             </li>
-            <li>
-              <a className="dropdown-item primary-color" href="#">
-                Acessórios
+            <li className="nav-item dropdown bg-primary-color">
+              <a
+                className="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Produtos
               </a>
+              <ul className="dropdown-menu">
+                <li className="text-color secondary-color">
+                  <a className="dropdown-item" href="#">
+                    Rações
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Acessórios
+                  </a>
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Produtos Veterniários
+                  </a>
+                </li>
+              </ul>
             </li>
-            <li>
-              <a className="dropdown-item primary-color" href="#">
-                Produtos Veterniários
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Contato
               </a>
             </li>
           </ul>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link primary-color" href="#">
-            Contato
-          </a>
-        </li>
-      </ul>
-      <ItemCount />
-      {/* <div>{count}</div> */}
-      <CartWidjet />
+        </div>
+        <CartWidjet />
+      </div>
     </nav>
   );
 }
