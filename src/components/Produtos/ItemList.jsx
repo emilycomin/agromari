@@ -1,4 +1,5 @@
 import ItemCount from "../ItemCount/ItemCount";
+import Item from "./Item";
 
 let itens = [
   {
@@ -33,22 +34,38 @@ let itens = [
     categoria: "Cachorro",
     image: <img src="../img/Racoes/0001.jpg" />,
   },
+  {
+    id: 5,
+    Nome: "Ração Cães castrados",
+    preco: "69,90",
+    texto: "Pacote de 1kg",
+    categoria: "Cachorro",
+    image: <img src="../img/Racoes/0001.jpg" />,
+  },
 ];
 
-export default function ItemList({ id, nome, preco }) {
+export default function ItemList() {
   const promiseItens = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(itens);
     }, 2000);
   });
   promiseItens.then((response) => {
-    console.log(response);
+    return;
   });
+
   return (
     <div>
-      {id}
-      {nome}
-      {preco}
+      {itens.map((item) => (
+        <Item
+          Key={item.id}
+          Nome={itens.Nome}
+          preco={itens.preco}
+          text={itens.texto}
+          image={itens.image}
+        />
+      ))}
+      ;
     </div>
   );
 }
