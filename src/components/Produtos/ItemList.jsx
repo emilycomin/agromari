@@ -35,7 +35,7 @@ let itens = [
   },
 ];
 
-export default function ItemList({ id }) {
+export default function ItemList({ id, nome, preco }) {
   const promiseItens = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(itens);
@@ -44,5 +44,11 @@ export default function ItemList({ id }) {
   promiseItens.then((response) => {
     console.log(response);
   });
-  return <div>{id}</div>;
+  return (
+    <div>
+      {id}
+      {nome}
+      {preco}
+    </div>
+  );
 }
