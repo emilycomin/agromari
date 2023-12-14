@@ -36,14 +36,14 @@ let itens = [
 ];
 
 export default function ItemList(name, text, price, image) {
-  return (
-    const promisseItens = new Promise((resolve, reject) => {
+ 
+    const promiseItens = new Promise((resolve, reject) => {
       setTimeout(() => {
         resolve(itens)
       }, 2000)
     })
-    Promise.Itens.then((response) => {
-      
+    promiseItens.then((response) => {
+      console.log(response)
     })
-  );
+    return ( );
 }
