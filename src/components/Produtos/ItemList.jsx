@@ -35,15 +35,14 @@ let itens = [
   },
 ];
 
-export default function ItemList(name, text, price, image) {
- 
-    const promiseItens = new Promise((resolve, reject) => {
-      setTimeout(() => {
-        resolve(itens)
-      }, 2000)
-    })
-    promiseItens.then((response) => {
-      console.log(response)
-    })
-    return ( );
+export default function ItemList({ id }) {
+  const promiseItens = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(itens);
+    }, 2000);
+  });
+  promiseItens.then((response) => {
+    console.log(response);
+  });
+  return <div>{id}</div>;
 }
