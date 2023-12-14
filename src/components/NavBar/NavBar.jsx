@@ -3,10 +3,11 @@ import "bootstrap/js/dist/tab";
 import "bootstrap/js/dist/dropdown";
 import "bootstrap/js/dist/collapse";
 import "../NavBar/NavBar.css";
-import CartWidjet from "../CartWidjet/CartWidjet";
+import CartWidjet from "./CartWidjet";
 import { List } from "@phosphor-icons/react";
+import LogInButton from "./LogInButton";
 
-function NavBar() {
+export default function NavBar() {
   return (
     <nav
       className="navbar navbar-expand-lg fixed-top bg-primary-color"
@@ -29,10 +30,7 @@ function NavBar() {
             <List size={32} />
           </span>
         </button>
-        <div
-          className="collapse navbar-collapse d-flex justify-content-around"
-          id="navbarNavAltMarkup"
-        >
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul className="nav nav-tabs">
             <li className="nav-item">
               <a
@@ -80,9 +78,11 @@ function NavBar() {
             </li>
           </ul>
         </div>
-        <CartWidjet />
+        <div className="icons d-flex">
+          <LogInButton />
+          <CartWidjet />
+        </div>
       </div>
     </nav>
   );
 }
-export default NavBar;

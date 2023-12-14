@@ -1,27 +1,14 @@
 import React from "react";
-import "./ItemListContainer.css";
-import ItemCount from "../ItemCount/ItemCount";
-import Images from "../../img/Racoes/0002.jpg";
 
-function ItemListContainer(props) {
+import Item from "../Produtos/Item";
+
+function ItemListContainer() {
   return (
-    <div className="card">
-      <img
-        src={Images}
-        className="align-self-center"
-        alt=""
-        height={100}
-        width={50}
-      />
-      <div className="card-body">
-        <h5 className="card-title">{props.name}</h5>
-        <h4>{props.price}</h4>
-        <p className="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
-      </div>
-      <ItemCount stock={3} initial={1} />
+    <div className="container">
+      <Item nome="Ração" price="R$ 59,90" text="Ração de 1kg" />
+      <Item nome="Ração" price="R$ 59,90" text="Ração de 1kg" />
+      <Item nome="Ração" price="R$ 59,90" text="Ração de 1kg" />
+      <button></button>
     </div>
   );
 }

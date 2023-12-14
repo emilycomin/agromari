@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Button from "../ButtonCart/ButtonCart";
 import "./ItemCount.css";
 // resolver problema dos números.... tem que acrescentar até o estoque
 // e diminuir até 1
@@ -31,15 +30,11 @@ export default function ItemCount({ stock, initial }) {
       <div className="botoesCarrinho">
         <input type="text" value={count} />
         <div className="plusMinusButton">
-          <Button className="item" event={addProduto} text="+" />
-          <Button className="item" event={tirarProduto} text="-" />
+          <button onClick={addProduto}>+</button>
+          <button onClick={tirarProduto}>-</button>
         </div>
+        <button onClick={addOnCart} Adicionar ao carrinho></button>
       </div>
-      <Button
-        className="cart"
-        onClick={addOnCart}
-        text="Adicionar ao carrinho"
-      />
     </div>
   );
 }
