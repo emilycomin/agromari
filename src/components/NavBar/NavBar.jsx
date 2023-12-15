@@ -18,7 +18,7 @@ export default function NavBar() {
           <img src={Logo} alt="" height={50} width={100} />
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarNavAltMarkup"
@@ -26,7 +26,7 @@ export default function NavBar() {
           aria-expanded="false"
           aria-label="Alterna navegação"
         >
-          <span class="navbar-toggler-icon">
+          <span className="navbar-toggler-icon">
             <List size={32} />
           </span>
         </button>

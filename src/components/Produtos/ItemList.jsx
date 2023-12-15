@@ -48,17 +48,15 @@ function ItemList() {
   return (
     <div className={styles.productContainer}>
       {itens.map((item) => {
-        console.log(item.titulo);
         return (
-          <Item />
-          // <Item
-          //   key={item.id}
-          //   titulo="Emily"
-          //   Nome={itens.Nome}
-          //   preco={itens.preco}
-          //   text={itens.texto}
-          //   image={itens.image}
-          // />
+          <Item
+            key={item.id}
+            image={item.image}
+            titulo={item.titulo}
+            Nome={item.Nome}
+            preco={item.preco}
+            text={item.texto}
+          />
         );
       })}
     </div>

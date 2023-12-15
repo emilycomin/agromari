@@ -1,14 +1,14 @@
 import "./global.css";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import ItemList from "./components/Produtos/ItemList";
 
 function App() {
   return (
     <>
       <div className="App">
         <NavBar />
-        <ItemListContainer />
+        <ItemList />
         <Footer />
       </div>
     </>
