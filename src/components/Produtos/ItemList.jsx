@@ -1,10 +1,10 @@
-import ItemCount from "../ItemCount/ItemCount";
 import Item from "./Item";
+import styles from "./ItemList.module.css";
 
-let itens = [
+const itens = [
   {
     id: 1,
-    Nome: "Ração Gatos castrados",
+    titulo: "Ração gatos castrados",
     preco: "59,90",
     texto: "Pacote de 1kg",
     categoria: "Gatos",
@@ -12,7 +12,7 @@ let itens = [
   },
   {
     id: 2,
-    Nome: "Ração Cães castrados",
+    titulo: "Ração Cães castrados",
     preco: "69,90",
     texto: "Pacote de 1kg",
     categoria: "Cachorro",
@@ -20,7 +20,7 @@ let itens = [
   },
   {
     id: 3,
-    Nome: "Ração Gatos Filhotes",
+    titulo: "Ração Gatos Filhotes",
     preco: "89,90",
     texto: "Pacote de 1kg",
     categoria: "Gatos",
@@ -28,7 +28,7 @@ let itens = [
   },
   {
     id: 4,
-    Nome: "Ração Cães castrados",
+    titulo: "Ração Cães castrados",
     preco: "69,90",
     texto: "Pacote de 1kg",
     categoria: "Cachorro",
@@ -36,7 +36,7 @@ let itens = [
   },
   {
     id: 5,
-    Nome: "Ração Cães castrados",
+    titulo: "Ração Cães castrados",
     preco: "69,90",
     texto: "Pacote de 1kg",
     categoria: "Cachorro",
@@ -44,28 +44,24 @@ let itens = [
   },
 ];
 
-export default function ItemList() {
-  const promiseItens = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(itens);
-    }, 2000);
-  });
-  promiseItens.then((response) => {
-    return;
-  });
-
+function ItemList() {
   return (
-    <div>
-      {itens.map((item) => (
-        <Item
-          Key={item.id}
-          Nome={itens.Nome}
-          preco={itens.preco}
-          text={itens.texto}
-          image={itens.image}
-        />
-      ))}
-      ;
+    <div className={styles.productContainer}>
+      {itens.map((item) => {
+        console.log(item.titulo);
+        return (
+          <Item />
+          // <Item
+          //   key={item.id}
+          //   titulo="Emily"
+          //   Nome={itens.Nome}
+          //   preco={itens.preco}
+          //   text={itens.texto}
+          //   image={itens.image}
+          // />
+        );
+      })}
     </div>
   );
 }
+export default ItemList;

@@ -1,11 +1,8 @@
 import React from "react";
 import ItemList from "../Produtos/ItemList";
+import styles from "./ItemListContainer";
 
 function ItemListContainer() {
-  return (
-    <div className="container">
-      <ItemList />
-    </div>
-  );
+  return <ItemList />;
 }
 export default ItemListContainer;

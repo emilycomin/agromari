@@ -1,17 +1,20 @@
-export default function Item({ Nome, preco, texto, image }) {
+import React from "react";
+import styles from "./Item.module.css";
+
+export default function Item({ titulo, preco, image, texto }) {
   return (
-    //aqui onde vai se mostrar os detalhes do produto
-    <div class="card mb-3">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src={image} />
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h2 class="card-title">{Nome}</h2>
-            <h3>{preco}</h3>
-            <p class="card-text">{texto}</p>
-          </div>
+    //aqui onde vai se mostrar os card com os produtos
+
+    <div className={styles.scardContainer}>
+      <div className={styles.card}>
+        <img src={image} className="cadrImage" />
+        <div className={styles.cardBody}>
+          <h5 className="cardTitle">{titulo}</h5>
+          <h4>{preco}</h4>
+          <p className="cardText">{texto}</p>
+          <a href="#" className="cardButtonBuy">
+            Adicionar ao carrinho
+          </a>
         </div>
       </div>
     </div>

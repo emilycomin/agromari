@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./ItemCount.css";
+import styles from "./ItemCount.module.css";
 // resolver problema dos números.... tem que acrescentar até o estoque
 // e diminuir até 1
 
@@ -27,13 +27,19 @@ export default function ItemCount({ stock, initial }) {
 
   return (
     <div>
-      <div className="botoesCarrinho">
+      <div className={styles.botoesCarrinho}>
         <input type="text" value={count} />
-        <div className="plusMinusButton">
+        <div className={styles.plusMinusButton}>
           <button onClick={addProduto}>+</button>
           <button onClick={tirarProduto}>-</button>
         </div>
-        <button onClick={addOnCart} Adicionar ao carrinho></button>
+        <button
+          className={styles.cartButton}
+          onClick={addOnCart}
+          Adicionar
+          ao
+          carrinho
+        ></button>
       </div>
     </div>
   );
