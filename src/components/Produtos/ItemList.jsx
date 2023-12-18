@@ -1,14 +1,16 @@
-import Item from "./Item";
+import ItemCard from "./ItemCard";
 import styles from "./ItemList.module.css";
 
 const itens = [
   {
     id: 1,
-    titulo: "Ração gatos castrados",
+    titulo: "Ração Gatos",
     preco: "59,90",
     texto: "Pacote de 1kg",
     categoria: "Gatos",
-    image: <img src="../img/Racoes/0001.jpg" />,
+    stock: 10,
+    image:
+      "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png",
   },
   {
     id: 2,
@@ -16,7 +18,9 @@ const itens = [
     preco: "69,90",
     texto: "Pacote de 1kg",
     categoria: "Cachorro",
-    image: <img src="../img/Racoes/0001.jpg" />,
+    stock: 30,
+    image:
+      "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png",
   },
   {
     id: 3,
@@ -24,7 +28,9 @@ const itens = [
     preco: "89,90",
     texto: "Pacote de 1kg",
     categoria: "Gatos",
-    image: <img src="../img/Racoes/0001.jpg" />,
+    stock: 25,
+    image:
+      "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png",
   },
   {
     id: 4,
@@ -32,15 +38,19 @@ const itens = [
     preco: "69,90",
     texto: "Pacote de 1kg",
     categoria: "Cachorro",
-    image: <img src="../img/Racoes/0001.jpg" />,
+    stock: 13,
+    image:
+      "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png",
   },
   {
     id: 5,
-    titulo: "Ração Cães castrados",
+    titulo: "Ração Cães Filhotes",
     preco: "69,90",
     texto: "Pacote de 1kg",
     categoria: "Cachorro",
-    image: <img src="../img/Racoes/0001.jpg" />,
+    stock: 5,
+    image:
+      "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png",
   },
 ];
 
@@ -48,17 +58,16 @@ function ItemList() {
   return (
     <div className={styles.productContainer}>
       {itens.map((item) => {
-        console.log(item.titulo);
         return (
-          <Item />
-          // <Item
-          //   key={item.id}
-          //   titulo="Emily"
-          //   Nome={itens.Nome}
-          //   preco={itens.preco}
-          //   text={itens.texto}
-          //   image={itens.image}
-          // />
+          <ItemCard
+            key={item.id}
+            titulo={item.titulo}
+            Nome={item.Nome}
+            preco={item.preco}
+            texto={item.texto}
+            image={item.image}
+            stock={item.stock}
+          />
         );
       })}
     </div>

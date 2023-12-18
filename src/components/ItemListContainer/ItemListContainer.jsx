@@ -1,8 +1,12 @@
-import React from "react";
 import ItemList from "../Produtos/ItemList";
-import styles from "./ItemListContainer";
+import ItemFilter from "../ItemFilter/ItemFilter";
+import styles from "./ItemListContainer.module.css";
 
-function ItemListContainer() {
-  return <ItemList />;
+export default function ItemListContainer() {
+  return (
+    <div className={styles.listContainer}>
+      <ItemFilter />
+      <ItemList />
+    </div>
+  );
 }
-export default ItemListContainer;

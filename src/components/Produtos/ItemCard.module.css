@@ -1,0 +1,51 @@
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 20px;
+}
+.card{
+    width: 200px;
+    height: 260px;
+    background-color: #f5f3e08f;
+    border-radius: 20px;
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    justify-content: flex-end;
+}
+.card > img{
+    width: 70px;
+    margin-bottom: 9px;
+    align-self: center;
+}
+h5 {
+    font-size: 18px;
+}
+h4{
+    font-size: 20px;
+}
+
+.cardBody{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    color: var(--dark-slate-gray);
+}
+.buyButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cardButtonBuy{
+    text-decoration: none;
+    background-color: var(--yellow-green);
+    border-radius: 5px;
+    color: var(--dark-slate-gray);
+    width: 70%;
+    font-size: 12px;
+   text-align: center;
+   padding: 10px 0;
+    
+}
