@@ -26,21 +26,19 @@ export default function ItemCount({ stock, initial }) {
   //produto no carrinho e chamar ela no botão do cart separadamente.
 
   return (
-    <div>
-      <div className={styles.botoesCarrinho}>
-        <input type="text" value={count} />
-        <div className={styles.plusMinusButton}>
-          <button onClick={addProduto}>+</button>
-          <button onClick={tirarProduto}>-</button>
-        </div>
-        <button
+    <div className={styles.botoesCarrinho}>
+      <input type="text" value={count} />
+      <div className={styles.plusMinusButton}>
+        <button onClick={addProduto}>+</button>
+        <button onClick={tirarProduto}>-</button>
+      </div>
+      {/* <button
           className={styles.cartButton}
           onClick={addOnCart}
           Adicionar
           ao
           carrinho
-        ></button>
-      </div>
+        ></button> */}
     </div>
   );
 }
