@@ -1,4 +1,5 @@
 import ItemDetail from "./ItemDetail";
+import ItemFilter from "../ItemFilter/ItemFilter";
 
 const getItem = () => {
   // promises
@@ -8,5 +9,10 @@ const getItem = () => {
 };
 
 export default function itemDetailContent() {
-  return <ItemDetail />;
+  return (
+    <fragment>
+      <ItemFilter />
+      <ItemDetail />;
+    </fragment>
+  );
 }

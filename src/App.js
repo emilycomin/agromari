@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartWidjet from "./components/NavBar/CartWidjet";
 import Contato from "./components/Contato/Contato";
 import ItemDetail from "./components/Produtos/ItemDetail";
+import ItemFilter from "./components/ItemFilter/ItemFilter";
 
 function App() {
   return (
