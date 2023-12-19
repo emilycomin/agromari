@@ -6,7 +6,6 @@ export default function Item({ titulo, preco, image, texto, stock }) {
   return (
     //aqui onde vai se mostrar os card com os produtos
     <fragment>
-      <ItemFilter />
       <div className={styles.cardContainer}>
         <div className={styles.card}>
           <img src={image} className="cadrImage" />
