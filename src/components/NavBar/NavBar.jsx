@@ -4,7 +4,7 @@ import "bootstrap/js/dist/dropdown";
 import "bootstrap/js/dist/collapse";
 import styles from "../NavBar/NavBar.module.css";
 import CartWidjet from "./CartWidjet";
-import LogInButton from "./LogInButton";
+import LogInButton from "../Login/LogInButton";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
@@ -20,8 +20,12 @@ export default function NavBar() {
           <Link to="/paginaDeContato">Contato</Link>
         </div>
         <div className={styles.icons}>
-          <LogInButton fill="#d12323" />
-          <CartWidjet fill="#fff" />
+          <Link to="/login">
+            <LogInButton fill="#d12323" />
+          </Link>
+          <Link to="/carrinho">
+            <CartWidjet fill="#fff" />
+          </Link>
         </div>
       </div>
     </nav>
