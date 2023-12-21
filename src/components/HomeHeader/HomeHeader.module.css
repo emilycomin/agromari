@@ -1,0 +1,8 @@
+.homeContainer > img{
+    width: 400px;
+}
+.homeContainer {
+    text-align: center;
+    color: #e98719;
+    font-weight: 700;
+}

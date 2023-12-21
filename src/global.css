@@ -4,7 +4,7 @@
   --mikado-yellow: #FAC424ff;
   --dark-slate-gray: #26454Bff;
   --dark-slate-gray100:#396871 ;
-  --fulvous: #E98719ff;
+  --fulvous: #e98719;
 }
 
 * {
@@ -14,5 +14,5 @@
   border-sizing: border-box;
 }
 body {
-  background-color: #fcfcf7;
+  background-color: #ffffff;
 }

@@ -11,7 +11,7 @@ export default function ItemDetail({ item }) {
       <img src={item.image} />
       <div className={styles.itemInfo}>
         <h2 className={styles.itemTitulo}>{item.titulo}</h2>
-        <h3 className={styles.itemPreco}>{item.preco}</h3>
+        <h3 className={styles.itemPreco}>R$ {item.preco}</h3>
         <div className={styles.itemDescription}>
           <p>{item.texto}</p>
         </div>
