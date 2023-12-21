@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import ItemCard from "./ItemCard";
 import styles from "./ItemList.module.css";
-import { Link } from "react-router-dom";
 
 function ItemList() {
   const [itens, setItem] = useState([]);
@@ -12,7 +11,7 @@ function ItemList() {
       redirect: "follow",
     };
 
-    fetch("http://localhost:3004/produtos")
+    fetch("https://my-json-server.typicode.com/emilycomin/agromari/produtos")
       .then((response) => response.json())
       .then((data) => setItem(data))
       .catch((error) => console.log("error", error));
@@ -24,19 +23,7 @@ function ItemList() {
   return (
     <div className={styles.productContainer}>
       {itens.map((item) => {
-        return (
-          <Link to="/produtos/itemDetailContainer">
-            <ItemCard
-              key={item.id}
-              titulo={item.titulo}
-              Nome={item.Nome}
-              preco={item.preco}
-              texto={item.texto}
-              image={item.image}
-              stock={item.stock}
-            />
-          </Link>
-        );
+        return <ItemCard item={item} />;
       })}
     </div>
   );
