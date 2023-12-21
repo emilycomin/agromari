@@ -1,0 +1,29 @@
+.itemDetailContent{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+    margin: 30px 40px;
+}
+.itemDetailContent >img {
+    height: 400px;
+}
+
+.itemInfo{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: flex-end;
+}
+.cardButtonBuy{
+    text-decoration: none;
+    background-color: var(--yellow-green);
+    border-radius: 5px;
+    color: var(--dark-slate-gray);
+    width: 70%;
+    font-size: 12px;
+   text-align: center;
+   padding: 10px 0;
+    
+}

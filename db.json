@@ -1,0 +1,63 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "titulo": "Ração Gatos",
+      "preco": "59,90",
+      "texto": "Pacote de 1kg",
+      "categoria": "Gatos",
+      "stock": 10,
+      "image":
+        "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png"
+    },
+    {
+      "id": 2,
+      "titulo": "Ração Cães castrados",
+      "preco": "69,90",
+      "texto": "Pacote de 1kg",
+      "categoria": "Cachorro",
+     " stock": 30,
+      "image":
+        "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png"
+    },
+    {
+      "id": 2,
+      "titulo": "Ração Gatos filhotes",
+      "preco": "69,90",
+      "texto": "Pacote de 1kg",
+      "categoria": "Gatos",
+     " stock": 30,
+      "image":  "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png"
+    },
+    {
+      "id": 4,
+      "titulo": "Ração Cães castrados",
+      "preco": "69,90",
+      "texto": "Pacote de 1kg",
+      "categoria": "Cachorro",
+      "stock": 13,
+      "image":
+        "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png"
+    },
+    {
+      "id": 5,
+      "titulo": "Ração Cães Filhotes",
+      "preco": "69,90",
+      "texto": "Pacote de 1kg",
+      "categoria": "Cachorro",
+      "stock": 5,
+      "image":
+        "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

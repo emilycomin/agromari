@@ -1,6 +1,8 @@
 .productContainer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 75%;
+    width: 65%;
+    margin: auto;
+    justify-content: center;
 }
+

@@ -1,4 +1,4 @@
 .listContainer {
-    border: red 1px solid;
     display: flex;
+    margin-top: 9px;
 }
