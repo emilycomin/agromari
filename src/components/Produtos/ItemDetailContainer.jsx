@@ -24,15 +24,16 @@ export default function ItemDetailContainer() {
     getItem();
     setProduto(
       produto.filter((item) => {
-        return item.d === id;
+        return item.id === id;
       })
     );
   }, [id]);
+  console.log(produto);
 
   return (
     <div className={styles.detailContent}>
       <ItemFilter />
-      {produto.length == 0 ? (
+      {produto.length === 0 ? (
         console.log("error")
       ) : (
         <ItemDetail item={produto[id]} />

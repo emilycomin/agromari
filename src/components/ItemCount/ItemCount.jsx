@@ -19,9 +19,7 @@ export default function ItemCount({ stock, initial }) {
       setCount(count - 1);
     }
   }
-  function addOnCart() {
-    console.log(count);
-  }
+
   //aqui dá pra fazer mais um função para adicionar o
   //produto no carrinho e chamar ela no botão do cart separadamente.
 

@@ -1,7 +1,11 @@
 import styles from "./ItemDetail.module.css";
-import ItemFilter from "../ItemFilter/ItemFilter";
+import ItemCount from "../ItemCount/ItemCount";
 
 export default function ItemDetail({ item }) {
+  function addOnCart() {
+    console.log("adicionado ao carrinho");
+  }
+
   return (
     <div className={styles.itemDetailContent}>
       <img src={item.image} />
@@ -12,10 +16,10 @@ export default function ItemDetail({ item }) {
           <p>{item.texto}</p>
         </div>
         <div className={styles.buyButtons}>
-          {/* <ItemCount initial={1} /> */}
-          <a href="#" className={styles.cardButtonBuy}>
+          <ItemCount initial={1} stock={item.stock} />
+          <button className={styles.cardButtonBuy} onClick={addOnCart}>
             Adicionar ao carrinho
-          </a>
+          </button>
         </div>
       </div>
     </div>
