@@ -1,0 +1,14 @@
+.cardButtonBuy{
+    background-color: var(--yellow-green);
+    border-radius: 5px;
+    color: var(--dark-slate-gray);
+    width: 9rem;
+    height: 2rem;
+    font-size: 14px;
+    border: none;
+    transition: 0.2s ease-out;
+    border: 1px solid var(--yellow-green);
+}
+.cardButtonBuy:hover{
+    box-shadow: rgba(118, 118, 118, 0.502) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}

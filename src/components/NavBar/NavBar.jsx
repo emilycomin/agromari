@@ -19,10 +19,10 @@ export default function NavBar() {
         </div>
         <div className={styles.icons}>
           <Link to="/login">
-            <LogInButton fill="#d12323" />
+            <LogInButton color="#a4c735" />
           </Link>
           <Link to="/carrinho">
-            <CartWidjet fill="#fff" />
+            <CartWidjet color="#a4c735" />
           </Link>
         </div>
       </div>
