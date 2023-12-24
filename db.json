@@ -16,7 +16,7 @@
       "preco": "69,90",
       "texto": "Pacote de 1kg",
       "categoria": "Cachorro",
-     "stock": 11,
+      "stock": 11,
       "image":
         "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png"
     },
@@ -26,7 +26,7 @@
       "preco": "69,90",
       "texto": "Pacote de 1kg",
       "categoria": "Gatos",
-     "stock": 7,
+      "stock": 7,
       "image":  "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png"
     },
     {

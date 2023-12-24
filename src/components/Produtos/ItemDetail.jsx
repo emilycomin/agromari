@@ -1,6 +1,8 @@
 import styles from "./ItemDetail.module.css";
 import ItemCount from "../ItemCount/ItemCount";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 export default function ItemDetail({ item }) {
   //usando o estado para modificar o value do input pelos botões
@@ -20,7 +22,18 @@ export default function ItemDetail({ item }) {
 
   function addOnCart() {
     console.log("adicionado ao carrinho");
-    console.log(item);
+    console.log(count);
+    Swal.fire({
+      icon: "success",
+      background: "#ffffff67",
+      title: "Adicionado ao carrinho",
+      showConfirmButton: false,
+      timer: 1000,
+    });
+
+    // quando eu clicaar no botão add carrinho, quero salvar o item dentro de um novo array e mostrat no cartWidjet
+    // e também importar o valor de count.
+    // e mostrar na cestinha a quantidade de itens no carrinho
   }
 
   return (
@@ -40,9 +53,11 @@ export default function ItemDetail({ item }) {
             tirarProduto={tirarProduto}
             count={count}
           />
-          <button className={styles.cardButtonBuy} onClick={addOnCart}>
-            Adicionar ao carrinho
-          </button>
+          <Link to="/carrinho">
+            <button className={styles.cardButtonBuy} onClick={addOnCart}>
+              Adicionar ao carrinho
+            </button>
+          </Link>
         </div>
       </div>
     </div>

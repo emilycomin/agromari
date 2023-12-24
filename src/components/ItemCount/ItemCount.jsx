@@ -19,13 +19,6 @@ export default function ItemCount({
         <button onClick={addProduto}>+</button>
         <button onClick={tirarProduto}>-</button>
       </div>
-      {/* <button
-          className={styles.cartButton}
-          onClick={addOnCart}
-          Adicionar
-          ao
-          carrinho
-        ></button> */}
     </div>
   );
 }

@@ -32,3 +32,6 @@
    padding: 10px 0;
    border: none;
 }
+.cardButtonBuy > a{
+    text-decoration: none;
+}

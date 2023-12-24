@@ -1,0 +1,30 @@
+.cartContent{
+    padding: 30px;
+    font-size: .75rem;
+}
+.itemCartContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tituloCart{
+    display: flex;
+    flex-direction: column;
+}
+.itemCartInfo{
+    display: flex;
+    flex-direction: row;
+ 
+}
+.itemCartInfo > img{
+    width: 50px;
+}
+
+.buyButtons{
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+h2, h3 {
+    font-size: 1.5rem;
+}
