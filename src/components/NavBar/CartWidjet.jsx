@@ -2,8 +2,12 @@ import styles from "./CartWidjet.module.css";
 import Logo from "../../img/Racoes/0002.jpg";
 import ItemCount from "../ItemCount/ItemCount";
 import ButtonText from "../ButtonText/ButtonText";
+import { useContext } from "react";
+import { CartContext } from "../Contexts/CartContext";
 
 export default function CartWidjet() {
+  //aqui eu pego os dados do context e mostro na tela
+
   return (
     <div className={styles.cartContent}>
       <div className={styles.itemCartContent}>

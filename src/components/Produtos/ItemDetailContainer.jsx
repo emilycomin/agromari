@@ -28,11 +28,11 @@ export default function ItemDetailContainer() {
       })
     );
   }, [id]);
-  console.log(produto);
 
   return (
     <div className={styles.detailContent}>
-      <ItemFilter />
+      {/* <ItemFilter /> */}
+
       {produto.length === 0 ? (
         console.log("error")
       ) : (

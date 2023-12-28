@@ -9,9 +9,6 @@ export default function ItemCount({
   tirarProduto,
   count,
 }) {
-  //aqui dá pra fazer mais um função para adicionar o
-  //produto no carrinho e chamar ela no botão do cart separadamente.
-
   return (
     <div className={styles.botoesCarrinho}>
       <input type="text" value={count} />

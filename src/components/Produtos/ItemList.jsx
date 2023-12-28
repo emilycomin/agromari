@@ -16,6 +16,7 @@ function ItemList() {
       .then((data) => setItem(data))
       .catch((error) => console.log("error", error));
   };
+  
   useEffect(() => {
     getItem();
   }, []);
