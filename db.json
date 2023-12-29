@@ -3,7 +3,7 @@
     {
       "id": 0,
       "titulo": "Ração Gatos",
-      "preco": "59,90",
+      "preco": "5990",
       "texto": "Pacote de 1kg",
       "categoria": "Gatos",
       "stock": 10,
@@ -13,7 +13,7 @@
     {
       "id": 1,
       "titulo": "Ração Cães castrados",
-      "preco": "69,90",
+      "preco": "6990",
       "texto": "Pacote de 1kg",
       "categoria": "Cachorro",
       "stock": 11,
@@ -23,7 +23,7 @@
     {
       "id": 2,
       "titulo": "Ração Gatos filhotes",
-      "preco": "69,90",
+      "preco": "6990",
       "texto": "Pacote de 1kg",
       "categoria": "Gatos",
       "stock": 7,
@@ -32,7 +32,7 @@
     {
       "id": 3,
       "titulo": "Ração Cães castrados",
-      "preco": "69,90",
+      "preco": "3200",
       "texto": "Pacote de 1kg",
       "categoria": "Cachorro",
       "stock": 13,
@@ -42,7 +42,7 @@
     {
       "id": 4,
       "titulo": "Ração Cães Filhotes",
-      "preco": "69,90",
+      "preco": "8980",
       "texto": "Pacote de 1kg",
       "categoria": "Cachorro",
       "stock": 5,
