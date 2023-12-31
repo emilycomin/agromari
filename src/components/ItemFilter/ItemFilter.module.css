@@ -2,5 +2,16 @@
     width: 15%;
     height: 100vh;
     border: 1px solid #b6b3b3;
-    position: absolute;
+}
+
+.searchButton{
+    text-decoration: none;
+    background-color: var(--yellow-green);
+    border-radius: 5px;
+    color: var(--dark-slate-gray);
+    width: 70%;
+    font-size: 12px;
+   text-align: center;
+   padding: 10px 0;
+   border: none;
 }

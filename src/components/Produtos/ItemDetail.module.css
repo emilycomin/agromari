@@ -1,7 +1,6 @@
 .itemDetailContent{
     display: flex;
     flex-direction: row;
-    position: relative;
     justify-content: center;
     margin: 30px 40px;
 }

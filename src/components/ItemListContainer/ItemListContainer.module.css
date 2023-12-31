@@ -1,4 +1,6 @@
 .listContainer {
     display: flex;
-    margin-top: 9px;
+    margin-top: 261px;
+    position: absolute;
+    justify-content: space-around;
 }

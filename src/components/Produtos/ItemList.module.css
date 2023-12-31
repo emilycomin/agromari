@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     width: 65%;
-    margin: auto;
     justify-content: center;
 }
 

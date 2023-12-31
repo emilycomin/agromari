@@ -1,13 +1,15 @@
-import styles from "../HomeContent/HomeContent.module.css";
-import { Bathtub, PawPrint, MapTrifold } from "@phosphor-icons/react";
+import styles from "./PaginaInicial.module.css";
+import { IoPawSharp } from "react-icons/io5";
+import { FaShower } from "react-icons/fa6";
+import { FaMapSigns } from "react-icons/fa";
 import ButtonText from "../ButtonText/ButtonText";
 
-export default function HomeContent() {
+export default function PaginaInicial() {
   return (
     <div className={styles.homeConteiner}>
       <div className={styles.quemSomos}>
         <div className={styles.card}>
-          <PawPrint size={52} color="#a4c735" weight="duotone" />
+          <IoPawSharp size={52} color="#a4c735" />
           <h2 className="tituloHome">Quem Somos</h2>
           <p>
             Somos uma empresa que há 10 anos proporcionando experiências para
@@ -17,7 +19,7 @@ export default function HomeContent() {
         </div>
       </div>
       <div className={styles.card}>
-        <Bathtub size={52} color="#a4c735" weight="duotone" />
+        <FaShower size={52} color="#a4c735" />
         <h2 className="tituloHome">O que fazemos</h2>
         <p>
           Disponibilizamos serviços de Banho, Tele-busca e entrega, atendimento
@@ -25,7 +27,7 @@ export default function HomeContent() {
         </p>
       </div>
       <div className={styles.card}>
-        <MapTrifold size={52} color="#a4c735" weight="duotone" />
+        <FaMapSigns size={52} color="#a4c735" />
         <h2 className="tituloHome">Localização</h2>
         <p>
           Nossa Loja está localizada na Zona Sul de Porto Alegre! Venha nos

@@ -1,12 +1,14 @@
 import styles from "./ItemDetail.module.css";
 import ItemCount from "../ItemCount/ItemCount";
-import { useEffect, useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../Contexts/CartContext";
+import FormatCurrency from "../utils/FormatCurrency";
 
 export default function ItemDetail({ item }) {
   //usando o estado para modificar o value do input pelos botões
   const [count, setCount] = useState(1);
+  const { cartItems, setCartItems } = useContext(CartContext);
 
   // para somar ou diminuir os botões do produto
   function addProduto() {
@@ -19,12 +21,10 @@ export default function ItemDetail({ item }) {
       setCount(count - 1);
     }
   }
-  // pegando a função do CartContext.provider
-  const { addOnCart } = useContext(CartContext);
-  const [cart, setCart] = useState([]);
-
-  function addItemOnCart() {
-    console.log(item.titulo);
+  // setCartProducts = cartProducts;
+  function handleAddOnCart() {
+    setCartItems([...cartItems, item]);
+    console.log(cartItems);
   }
 
   return (
@@ -32,7 +32,7 @@ export default function ItemDetail({ item }) {
       <img src={item.image} />
       <div className={styles.itemInfo}>
         <h2 className={styles.itemTitulo}>{item.titulo}</h2>
-        <h3 className={styles.itemPreco}>R$ {item.preco}</h3>
+        <h3 className={styles.itemPreco}>{FormatCurrency(item.preco)}</h3>
         <div className={styles.itemDescription}>
           <p>{item.texto}</p>
         </div>
@@ -45,7 +45,7 @@ export default function ItemDetail({ item }) {
             count={count}
           />
           {/* <Link to="/carrinho"> */}
-          <button className={styles.cardButtonBuy} onClick={addItemOnCart}>
+          <button className={styles.cardButtonBuy} onClick={handleAddOnCart}>
             Adicionar ao carrinho
           </button>
           {/* </Link> */}

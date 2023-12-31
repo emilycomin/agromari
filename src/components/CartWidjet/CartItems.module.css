@@ -1,0 +1,32 @@
+
+.tituloCart{
+    display: flex;
+    flex-direction: column;
+    padding: 0 8px;
+    display: flex;
+}
+.itemCartInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(226, 224, 224);
+    padding-bottom: 5px;
+    padding-top: 8px;
+}
+.tituloCart > h2 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.itemCartInfo > img {
+    width: 50px;
+}
+
+svg {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.itemCartInfo:last-child{
+    border-bottom: none;
+}
