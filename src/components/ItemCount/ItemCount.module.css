@@ -1,7 +1,6 @@
 .botoesCarrinho{
     display: flex;
     flex-direction: row;
-
 }
 .botoesCarrinho > input {
     height:40px;
@@ -22,8 +21,4 @@
     width: 16px;
     background-color: transparent;
     border: 1px solid #c1bfbf;
-}
-
-.cartButton{
-    
 }

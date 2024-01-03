@@ -13,6 +13,7 @@ export default function CartItems({ item }) {
     const removeItem = cartItems.filter((item) => item.id != id);
     setCartItems(removeItem);
   }
+
   return (
     <>
       <div className={styles.itemCartInfo}>

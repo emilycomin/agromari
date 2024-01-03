@@ -2,23 +2,24 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 30px 40px;
+    margin: 178px 40px;
+    position: absolute;
+    padding: 30px;
 }
 .itemDetailContent >img {
     height: 400px;
 }
-
 .itemInfo{
-    margin-left: 50px;
+    margin: 50px;
+    width: 18rem;
     display: flex;
     flex-direction: column;
-    align-items: left;
-    justify-content: flex-end;
-    margin-bottom: 1.5rem;
+    justify-content: flex-start;
     
 }
 .buyButtons{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 .cardButtonBuy{
@@ -27,11 +28,22 @@
     border-radius: 5px;
     color: var(--dark-slate-gray);
     width: 70%;
-    font-size: 12px;
+    font-size: 16px;
    text-align: center;
    padding: 10px 0;
    border: none;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
 }
 .cardButtonBuy > a{
     text-decoration: none;
+}
+.cardButtonBuy> span{
+    position: absolute;
+    right: 2px;
+    top: 0px;
+    font-weight: 700;
+    font-size: 1.25rem;
 }

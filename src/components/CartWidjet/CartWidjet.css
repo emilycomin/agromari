@@ -9,7 +9,7 @@
     z-index: 1;
     flex-direction: column;
     position: fixed;
-    top: 235px;
+    top: 185px;
     right: 0;
     background-color: #f7f7f7;
     transform: translate(110%, 0);
@@ -21,4 +21,8 @@
 .cartContentItem{
     flex-grow: 1;
     overflow: auto;
+}
+.cartButton{
+    display: flex;
+    flex-direction: row;
 }

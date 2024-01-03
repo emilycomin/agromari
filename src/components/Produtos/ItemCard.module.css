@@ -22,11 +22,16 @@
     transition: 0.2s ease-out;
     justify-content: flex-end;
 }
-.card > img{
+a > .cardImage{
     width: 80px;
     margin-bottom: 9px;
-    align-self: center;
+    text-decoration: none;
 }
+a {
+    display: flex;
+    justify-content: center;
+}
+
 h5 {
     font-size: 18px;
 }
@@ -44,4 +49,29 @@ h4{
     flex-direction: row;
     justify-content: center;
 }
+a > .detailItemButton{
+    width: 100%;
+}
+.cardButtonBuy{
+    background-color: var(--yellow-green);
+    border-radius: 5px;
+    color: var(--dark-slate-gray);
+    width: 9rem;
+    height: 2rem;
+    font-size: 14px;
+    border: none;
+    transition: 0.2s ease-out;
+    border: 1px solid var(--yellow-green);
+    position: relative;
+}
+.cardButtonBuy:hover{
+    box-shadow: rgba(118, 118, 118, 0.502) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
 
+.cardButtonBuy> span{
+    position: absolute;
+    right: 0px;
+    top: -10px;
+    font-weight: 700;
+    font-size: 1.25rem;
+}

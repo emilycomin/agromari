@@ -4,9 +4,11 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../Contexts/CartContext";
 import FormatCurrency from "../utils/FormatCurrency";
+import { BsBasket } from "react-icons/bs";
 
 export default function ItemDetail({ item }) {
   //usando o estado para modificar o value do input pelos botões
+  const { image, texto, titulo, preco } = item;
   const [count, setCount] = useState(1);
   const { cartItems, setCartItems } = useContext(CartContext);
 
@@ -21,21 +23,23 @@ export default function ItemDetail({ item }) {
       setCount(count - 1);
     }
   }
-  // setCartProducts = cartProducts;
+
   function handleAddOnCart() {
     setCartItems([...cartItems, item]);
-    console.log(cartItems);
   }
 
   return (
     <div className={styles.itemDetailContent}>
-      <img src={item.image} />
+      <img src={image} />
       <div className={styles.itemInfo}>
-        <h2 className={styles.itemTitulo}>{item.titulo}</h2>
-        <h3 className={styles.itemPreco}>{FormatCurrency(item.preco)}</h3>
+        <h2 className={styles.itemTitulo}>{titulo}</h2>
         <div className={styles.itemDescription}>
-          <p>{item.texto}</p>
+          <h5> DESCRIÇÃO</h5>
+          <hr />
+          <p>{texto}</p>
         </div>
+
+        <h3 className={styles.itemPreco}>{FormatCurrency(preco)}</h3>
         <div className={styles.buyButtons}>
           <ItemCount
             initial={setCount}
@@ -46,7 +50,8 @@ export default function ItemDetail({ item }) {
           />
           {/* <Link to="/carrinho"> */}
           <button className={styles.cardButtonBuy} onClick={handleAddOnCart}>
-            Adicionar ao carrinho
+            Adicionar ao carrinho <BsBasket size={20} />
+            <span>+</span>
           </button>
           {/* </Link> */}
         </div>

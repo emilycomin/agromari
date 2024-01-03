@@ -32,7 +32,7 @@ function ItemList() {
   ) : (
     <div className={styles.productContainer}>
       {itens.map((item) => {
-        return <ItemCard item={item} />;
+        return <ItemCard item={item} key={item.id} />;
       })}
     </div>
   );

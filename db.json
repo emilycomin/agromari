@@ -17,8 +17,7 @@
       "texto": "Pacote de 1kg",
       "categoria": "Cachorro",
       "stock": 11,
-      "image":
-        "src/img/Racoes/0001.jpg"
+      "image": "src="
     },
     {
       "id": 2,
