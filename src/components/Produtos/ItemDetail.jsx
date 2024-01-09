@@ -9,8 +9,7 @@ import { BsBasket } from "react-icons/bs";
 export default function ItemDetail({ item }) {
   //usando o estado para modificar o value do input pelos botões
   const { image, texto, titulo, preco } = item;
-  const [count, setCount] = useState(1);
-  const { cartItems, setCartItems } = useContext(CartContext);
+  const { cartItems, setCartItems, count, setCount } = useContext(CartContext);
 
   // para somar ou diminuir os botões do produto
   function addProduto() {
@@ -25,6 +24,10 @@ export default function ItemDetail({ item }) {
   }
 
   function handleAddOnCart() {
+    // verificar se existe ids iguais em um array
+
+    // verificar se o produto está disponivel conforme o estoque.
+    // então adicionar ao array do carrinho
     setCartItems([...cartItems, item]);
   }
 

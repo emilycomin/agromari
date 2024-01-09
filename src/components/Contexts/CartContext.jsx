@@ -3,13 +3,13 @@ import { createContext, useState } from "react";
 export const CartContext = createContext([]);
 
 export const CartProvider = ({ children }) => {
-  const [cartProducts, setCartProducts] = useState("Olá");
+  const [count, setCount] = useState(Number);
   const [cartItems, setCartItems] = useState([]);
   const [isCartVisible, setiIsCartVisible] = useState(false);
 
   const value = {
-    cartProducts,
-    setCartProducts,
+    count,
+    setCount,
     cartItems,
     setCartItems,
     isCartVisible,
