@@ -8,28 +8,24 @@ import { BsBasket } from "react-icons/bs";
 
 export default function ItemDetail({ item }) {
   //usando o estado para modificar o value do input pelos botões
-  const { image, texto, titulo, preco } = item;
-  const { cartItems, setCartItems, count, setCount } = useContext(CartContext);
-
-  // para somar ou diminuir os botões do produto
-  function addProduto() {
-    if (count < item.stock) {
-      setCount(count + 1);
-    }
-  }
-  function tirarProduto() {
-    if (count > 1) {
-      setCount(count - 1);
-    }
-  }
+  const { id, image, texto, titulo, preco } = item;
+  const { cartItems, setCartItems, count, setCount, quantity } =
+    useContext(CartContext);
 
   function handleAddOnCart() {
     // verificar se existe ids iguais em um array
-
+    const produtoDuplo = cartItems.find((item) => item.id === id);
     // verificar se o produto está disponivel conforme o estoque.
-    // então adicionar ao array do carrinho
-    setCartItems([...cartItems, item]);
+
+    //variavel dando true para quando há dois ids iguais
+    console.log(produtoDuplo);
+    if (produtoDuplo) {
+      return { ...item, count: count + 1 };
+    }
+    return setCartItems([...cartItems, item]);
   }
+
+  // NÃO COMPARTILHAR O COUNT COM USE CONTEXT, SE NÃO AFETA TODOS OS ITENS DO ARRAY E NÃO APENAS UM COMO DEVERIA.
 
   return (
     <div className={styles.itemDetailContent}>
@@ -42,15 +38,9 @@ export default function ItemDetail({ item }) {
           <p>{texto}</p>
         </div>
 
-        <h3 className={styles.itemPreco}>{FormatCurrency(preco)}</h3>
+        <h3 className={styles.itemPreco}>{preco}</h3>
         <div className={styles.buyButtons}>
-          <ItemCount
-            initial={setCount}
-            stock={item.stock}
-            addProduto={addProduto}
-            tirarProduto={tirarProduto}
-            count={count}
-          />
+          <ItemCount initial={setCount} stock={item.stock} count={count} />
           {/* <Link to="/carrinho"> */}
           <button className={styles.cardButtonBuy} onClick={handleAddOnCart}>
             Adicionar ao carrinho <BsBasket size={20} />

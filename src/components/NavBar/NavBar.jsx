@@ -13,8 +13,6 @@ export default function NavBar() {
   const { cartItems, isCartVisible, setiIsCartVisible } =
     useContext(CartContext);
 
-  console.log(isCartVisible);
-
   return (
     <div className={styles.container}>
       <Link to="/">

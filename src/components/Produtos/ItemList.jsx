@@ -4,7 +4,7 @@ import styles from "./ItemList.module.css";
 import Loading from "../Loading/Loading";
 
 function ItemList() {
-  const [itens, setItem] = useState([]);
+  const [itens, setItens] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const getItem = () => {
@@ -15,7 +15,7 @@ function ItemList() {
 
     fetch("https://my-json-server.typicode.com/emilycomin/agromari/produtos")
       .then((response) => response.json())
-      .then((data) => setItem(data))
+      .then((data) => setItens(data))
       .catch((error) => console.log("error", error));
   };
 

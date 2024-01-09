@@ -8,9 +8,12 @@ import FormatCurrency from "../utils/FormatCurrency";
 //estrutura e funções do carrinho que mostra o array de itens
 export default function CartWidjet({ item }) {
   //pegando os dados do context
-  const { cartItems, isCartVisible, setCartItems } = useContext(CartContext);
+  const { cartItems, isCartVisible, setCartItems, count } =
+    useContext(CartContext);
 
   const total = cartItems.reduce((acc, items) => items.preco + acc, 0);
+  const totalPrice = total * count;
+
   function handleClearCart() {
     setCartItems([]);
   }
@@ -31,7 +34,7 @@ export default function CartWidjet({ item }) {
       <div className="cartResume">
         <h4>Valor Total: </h4>
         {/* chamando a função criada para formatar os valores */}
-        <span>{FormatCurrency(total)}</span>
+        <span>{FormatCurrency(totalPrice)}</span>
       </div>
       <div className="cartButton">
         <ButtonText texto={"Limpar carrinho"} onCLick={handleClearCart} />
