@@ -42,11 +42,12 @@ export default function NavBar() {
             >
               <BsBasket size={30} color="#a4c735" />
               {/* integrando informaçãoes e mostrando o comprimento do array */}
+              {/* apenas mostrar valor se o tamanho do array for maior que 0, adicionando a propriedade de estilo cartStatus */}
               {cartItems.length > 0 && (
                 <span className={styles.cartStatus}>{cartItems.length}</span>
               )}
-              <CartWidjet />
             </button>
+            <CartWidjet />
           </div>
         </div>
       </nav>

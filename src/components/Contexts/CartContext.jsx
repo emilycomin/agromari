@@ -4,7 +4,7 @@ export const CartContext = createContext([]);
 
 export const CartProvider = ({ children }) => {
   //count do item count, quantidade de produtos que o cliente escolheu
-  const [count, setCount] = useState(Number);
+  const [count, setCount] = useState(1);
   //itens do array do carrinho
   const [cartItems, setCartItems] = useState([]);
   //variavel para abrir e fechar o carrinho de compras na barra lateral
