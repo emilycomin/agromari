@@ -24,6 +24,18 @@ export default function Search() {
           required
         />
 
+        <select name="categorias" placeholder="Selecione a Categoria">
+          <option value="" selected>
+            Selecione uma opção
+          </option>
+          <option value="racoesCaes">Rações Cães</option>
+          <option value="racoesGato" selected>
+            Rações Gatos
+          </option>
+          <option value="acessorios"> Acessórios</option>
+          <option value="medicamentos"> Medicamentos</option>
+        </select>
+
         <ButtonText texto="pesquisar" />
       </form>
     </aside>

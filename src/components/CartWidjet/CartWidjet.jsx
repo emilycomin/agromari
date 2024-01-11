@@ -15,7 +15,7 @@ export default function CartWidjet({ item }) {
   const totalPrice = total * count;
 
   function handleClearCart() {
-    setCartItems([]);
+    setCartItems.clear([]);
   }
 
   return (

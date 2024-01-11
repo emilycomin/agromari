@@ -9,21 +9,13 @@ import { BsBasket } from "react-icons/bs";
 export default function ItemDetail({ item }) {
   //usando o estado para modificar o value do input pelos botões
   const { id, image, texto, titulo, preco } = item;
-  const { cartItems, setCartItems, count, setCount, quantity, setQuantity } =
-    useContext(CartContext);
+  const { cartItems, setCartItems, count, setCount } = useContext(CartContext);
 
   function handleAddOnCart() {
     // verificar se existe ids iguais em um array, retorna true or false
     //find retorna o valore do array definido pela função, então irá retornar o item que tem o id igual.
     //desse item que retorna na variavel produtoDuplo eu mudo a quantidade e peço pra retornar no array cartItems.
-    const produtoDuplo = cartItems.filter((itemCart) => itemCart.id === id);
-    console.log(produtoDuplo);
-
-    //  if (!produtoDuplo) {
     setCartItems([...cartItems, item]);
-    // } else {
-    //   setQuantity(produtoDuplo.quantity + 1);
-    // }
   }
   //se o produto não está no carrinho, adiciona ele.
 

@@ -11,8 +11,10 @@ export default function Item({ item }) {
   const { cartItems, setCartItems } = useContext(CartContext);
 
   function handleAddOnCart() {
+    // const produtoDuplo = cartItems.find((item) => item.id === id);
     setCartItems([...cartItems, item]);
   }
+
   return (
     //aqui onde vai se mostrar os card com os produtos
     <div className={styles.cardContainer}>
