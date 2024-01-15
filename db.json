@@ -49,11 +49,18 @@
         "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png"
     }
   ],
-  "comments": [
+  "categorias": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "Cachorros"
+    },
+    {
+      "id": 2,
+      "name": "Gatos"
+    },
+    {
+      "id": 3,
+      "name": "Medicamentos"
     }
   ],
   "profile": {
