@@ -11,7 +11,6 @@ export default function Item({ item }) {
   const { cartItems, setCartItems } = useContext(CartContext);
 
   function handleAddOnCart() {
-    // const produtoDuplo = cartItems.find((item) => item.id === id);
     setCartItems([...cartItems, item]);
   }
 

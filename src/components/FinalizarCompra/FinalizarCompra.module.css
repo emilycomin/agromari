@@ -1,0 +1,11 @@
+.finalizarCompraContainer{
+    display: flex;
+    margin-top: 261px;
+    position: absolute;
+    width: 50vw;
+    flex-direction: row;
+}
+
+.resumoCompra{
+    width: 50vw;
+}

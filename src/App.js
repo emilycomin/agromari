@@ -1,15 +1,23 @@
 import "./global.css";
+//React
+import { useEffect, useState } from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useSearchParams,
+} from "react-router-dom";
+import { CartProvider } from "./components/Contexts/CartContext";
+//componentes
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/Produtos/ItemDetailContainer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CartWidjet from "./components/CartWidjet/CartWidjet";
 import Contato from "./components/Contato/Contato";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 import LogIn from "./components/Login/LogIn";
-import { CartProvider } from "./components/Contexts/CartContext";
 import PaginaInicial from "./components/PaginaInicial/PaginaInicial";
+import FinalizarCompra from "./components/FinalizarCompra/FinalizarCompra";
 
 function App() {
   return (
@@ -26,6 +34,7 @@ function App() {
             <Route path="/login" element={<LogIn />} />
             <Route path="/paginaDeContato" element={<Contato />} />
             <Route path="*" element={<PageNotFound />} />
+            <Route path="/finalizarCompra" element={<FinalizarCompra />} />
           </Routes>
         </CartProvider>
         <Footer />

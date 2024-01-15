@@ -1,30 +1,42 @@
 import "./CartWidjet.css";
-import ButtonText from "../ButtonText/ButtonText";
 import { useContext } from "react";
 import { CartContext } from "../Contexts/CartContext";
+//componentes
+import ButtonText from "../ButtonText/ButtonText";
 import CartItems from "./CartItems";
 import FormatCurrency from "../utils/FormatCurrency";
+// icones
+import { FaArrowLeftLong } from "react-icons/fa6";
+import { FaRegFaceSadCry } from "react-icons/fa6";
+//React-Router
+import { Link } from "react-router-dom";
 
 //estrutura e funções do carrinho que mostra o array de itens
-export default function CartWidjet({ item }) {
+export default function CartWidjet({ count }) {
   //pegando os dados do context
-  const { cartItems, isCartVisible, setCartItems, count } =
+  const { cartItems, setCartItems, isCartVisible, setIsCartVisible } =
     useContext(CartContext);
 
   const total = cartItems.reduce((acc, items) => items.preco + acc, 0);
   const totalPrice = total * count;
 
-  function handleClearCart() {
-    setCartItems.clear([]);
-  }
-
   return (
     <div className={`cartContent ${isCartVisible ? "cartContentVisible" : ""}`}>
+      <div className="cartHeader-ahgrs">
+        <button onClick={() => setIsCartVisible(!isCartVisible)}>
+          <FaArrowLeftLong size={25} />
+        </button>
+        CARRINHO DE COMPRAS
+      </div>
+      <hr />
       <div className="cartContentItem">
         {/* identificando se o carrinho está vazio ou não */}
         {/* quando não estiver vazio, passando os dados do array por map.  */}
         {cartItems.length === 0 ? (
-          <p>Seu carrinho está vazio</p>
+          <p>
+            <FaRegFaceSadCry /> <br />
+            Seu carrinho está vazio
+          </p>
         ) : (
           cartItems.map((cartItem) => {
             return <CartItems item={cartItem} key={cartItem.id} />;
@@ -37,8 +49,16 @@ export default function CartWidjet({ item }) {
         <span>{FormatCurrency(totalPrice)}</span>
       </div>
       <div className="cartButton">
-        <ButtonText texto={"Limpar carrinho"} onCLick={handleClearCart} />
-        <ButtonText texto={"Finalizar Compra"} />
+        <ButtonText
+          texto={"Continuar Comprando"}
+          event={() => setIsCartVisible(!isCartVisible)}
+        />
+        <Link to="/finalizarCompra">
+          <ButtonText
+            texto={"Finalizar Compra"}
+            event={() => setIsCartVisible(!isCartVisible)}
+          />
+        </Link>
       </div>
     </div>
   );

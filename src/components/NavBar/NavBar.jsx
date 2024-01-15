@@ -10,7 +10,7 @@ import { BsBasket } from "react-icons/bs";
 
 export default function NavBar() {
   //pegando informação do array de produtos do context
-  const { cartItems, isCartVisible, setiIsCartVisible } =
+  const { cartItems, isCartVisible, setIsCartVisible } =
     useContext(CartContext);
 
   return (
@@ -38,7 +38,7 @@ export default function NavBar() {
             </Link>
             <button
               className={styles.cartButton}
-              onClick={() => setiIsCartVisible(!isCartVisible)}
+              onClick={() => setIsCartVisible(!isCartVisible)}
             >
               <BsBasket size={30} color="#a4c735" />
               {/* integrando informaçãoes e mostrando o comprimento do array */}

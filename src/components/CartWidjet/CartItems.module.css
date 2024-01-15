@@ -30,3 +30,27 @@ svg {
 .itemCartInfo:last-child{
     border-bottom: none;
 }
+.botoesCarrinho{
+    display: flex;
+    flex-direction: row;
+}
+.botoesCarrinho > input {
+    height:40px;
+    width: 50px;
+    padding: 0.25rem 0.75rem;
+    position: absolute;
+    border: 1px solid #c1bfbf;
+}
+.plusMinusButton{
+    display: flex;
+    flex-direction: column;
+
+}
+.plusMinusButton >button{
+    height: 20px;
+    left: 34px;
+    position: relative;
+    width: 16px;
+    background-color: transparent;
+    border: 1px solid #c1bfbf;
+}

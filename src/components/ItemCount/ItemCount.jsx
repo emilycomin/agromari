@@ -1,11 +1,8 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import styles from "./ItemCount.module.css";
-import { CartContext } from "../Contexts/CartContext";
-// resolver problema dos números.... tem que acrescentar até o estoque
-// e diminuir até 1
 
 export default function ItemCount(item) {
-  const { count, setCount } = useContext(CartContext);
+  const [count, setCount] = useState(1);
 
   // para somar ou diminuir os botões do produto
   function addProduto() {
@@ -13,7 +10,7 @@ export default function ItemCount(item) {
       setCount(count + 1);
     }
   }
-  function tirarProduto() {
+  function tirarProduto(e) {
     if (count > 1) {
       setCount(count - 1);
     }
@@ -21,11 +18,7 @@ export default function ItemCount(item) {
 
   return (
     <div className={styles.botoesCarrinho}>
-      <input
-        type="text"
-        value={count}
-        onChange={(e) => setCount(e.target.value)}
-      />
+      <input type="text" value={count} />
       <div className={styles.plusMinusButton}>
         <button onClick={addProduto}>+</button>
         <button onClick={tirarProduto}>-</button>
