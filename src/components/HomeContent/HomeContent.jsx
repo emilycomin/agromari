@@ -1,4 +1,4 @@
-import styles from "../HomeContent/HomeContent.module.css";
+import styles from "./HomeContent.module.css";
 import { Bathtub, PawPrint, MapTrifold } from "@phosphor-icons/react";
 import ButtonText from "../ButtonText/ButtonText";
 

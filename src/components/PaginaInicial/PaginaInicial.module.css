@@ -1,3 +1,40 @@
 .homeConteiner{
-    
+    display: flex;
+    gap: 1.25rem;
+    flex-direction: column;
+    align-items: center;
+}
+.quemSomos{
+    margin-top: 18rem;
+}
+.card{
+    width: 14rem;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.40rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 16px 2px, rgba(205, 205, 207, 0.34) 0px 4px 7px -1px, rgba(205, 205, 207, 0.34) 0px 1px 0px inset;
+}
+.card p {
+    text-align:center;
+}
+
+@media only screen and (min-width: 768px){
+    .homeConteiner{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 14rem;
+        position: absolute;
+        width: 100vw;
+        justify-content: space-around;
+    }
+    .quemSomos{
+        margin-top: 0;
+    }
+    .card{
+        width: 18rem;
+    }
 }

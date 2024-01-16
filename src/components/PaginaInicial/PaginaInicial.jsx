@@ -18,22 +18,27 @@ export default function PaginaInicial() {
           </p>
         </div>
       </div>
-      <div className={styles.card}>
-        <FaShower size={52} color="#a4c735" />
-        <h2 className="tituloHome">O que fazemos</h2>
-        <p>
-          Disponibilizamos serviços de Banho, Tele-busca e entrega, atendimento
-          veterinário, rações, acessórios e medicamentos.
-        </p>
+      <div className={styles.oQueFazemos}>
+        <div className={styles.card}>
+          <FaShower size={52} color="#a4c735" />
+          <h2 className="tituloHome">O que fazemos</h2>
+          <p>
+            Disponibilizamos todos os serviços de Banho & Tosa para cães de
+            todos os portes, Tele-busca e entrega, atendimento veterinário.
+            Venda de rações, acessórios e medicamentos.
+          </p>
+        </div>
       </div>
-      <div className={styles.card}>
-        <FaMapSigns size={52} color="#a4c735" />
-        <h2 className="tituloHome">Localização</h2>
-        <p>
-          Nossa Loja está localizada na Zona Sul de Porto Alegre! Venha nos
-          visitar!
-        </p>
-        <ButtonText texto={"Entre em contato"} />
+      <div className={styles.ondeEstamos}>
+        <div className={styles.card}>
+          <FaMapSigns size={52} color="#a4c735" />
+          <h2 className="tituloHome">Localização</h2>
+          <p>
+            Nossa Loja está localizada na Zona Sul de Porto Alegre! Venha nos
+            visitar!
+          </p>
+          <ButtonText texto={"Entre em contato"} />
+        </div>
       </div>
     </div>
   );
