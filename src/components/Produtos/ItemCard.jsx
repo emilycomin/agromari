@@ -23,7 +23,7 @@ export default function Item({ item }) {
         </Link>
         <div className={styles.cardBody}>
           <h5 className="cardTitle">{titulo}</h5>
-          <h4>{FormatCurrency(preco)}</h4>
+          <h4>{preco}</h4>
           <p className="cardText">{texto}</p>
           <div className={styles.buyButtons}>
             <Link to={`/produtos/${id}`}>
