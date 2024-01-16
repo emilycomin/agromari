@@ -47,6 +47,36 @@
       "stock": 5,
       "image":
         "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png"
+    },
+    {
+      "id":6,
+      "titulo": "Bolinha Verde",
+      "preco": 39.90,
+      "texto": "Bola de silicone maciça. Ideal para cães que roem os brinquedos",
+      "categoria": "Cachorro",
+      "stock": 10,
+      "image":
+        "src/img/acessórios/bolinhaVerde.png"
+    },
+    {
+      "id":7,
+      "titulo": "Ração Cães Filhotes",
+      "preco": 89.80,
+      "texto": "Pacote de 1kg",
+      "categoria": "Cachorro",
+      "stock": 5,
+      "image":
+        "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png"
+    },
+    {
+      "id":8,
+      "titulo": "Ração Cães Filhotes",
+      "preco": 89.80,
+      "texto": "Pacote de 1kg",
+      "categoria": "Cachorro",
+      "stock": 5,
+      "image":
+        "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png"
     }
   ],
   "categorias": [
