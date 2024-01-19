@@ -5,8 +5,7 @@
       "titulo": "Ração Gatos Castrados",
       "preco": 59.90,
       "texto": "Pacote de 1kg para gatos castrados sabor peixe",
-      "categoria": "Gatos",
-      "image": "https://premierpet.com.br/wp-content/webp-express/webp-images/uploads/2023/09/golden_gatos_castrados_peixe.png.webp"       
+      "categoria": "Gatos" 
     },
     {
       "id": 2,
@@ -14,27 +13,22 @@
       "preco": 79.80,
       "texto": "Pacote de 1kg para cães de porte pequeno, sabor frango e arroz",
       "categoria": "Cachorro",
-      "stock": 11,
-      "image": "https://premierpet.com.br/wp-content/webp-express/webp-images/uploads/2020/11/racao-golden-formula-caes-adulto-porte-pequeno-frango-arroz.png.webp"
-    },
+      "stock": 11},
     {
       "id": 3,
       "titulo": "Ração Gatos filhotes",
       "preco": 99.90,
       "texto": "Ração premium para gatos em fase de crescimento. Pacote de 3kg. Sabor frango",
       "categoria": "Gatos",
-      "stock": 7,
-      "image":  "https://premierpet.com.br/wp-content/webp-express/webp-images/uploads/2020/11/MOCKUP-LAT-GOLDEN-GATOS-FILH-FRANGO-3-KG-RGB.png.webp"
+      "stock": 7
     },
     {
       "id": 4,
-      "titulo": "Ração Cães Adultos Light",
+      "titulo": "Ração Cães Adultos ",
       "preco": 89.00,
       "texto": "Ração premium. Para cães em restrições de calorias. Pacote de 1kg",
       "categoria": "Cachorro",
-      "stock": 13,
-      "image":
-        "https://premierpet.com.br/wp-content/webp-express/webp-images/uploads/2020/11/racao-golden-formula-caes-adulto-frango-arroz-light.png.webp"
+      "stock": 13
     },
     {
       "id":5,
@@ -42,38 +36,27 @@
       "preco": 89.80,
       "texto": "Pacote de 1kg, Ração premium para cães em fase de crescimento, sabor carne e arroz.",
       "categoria": "Cachorro",
-      "stock": 5,
-      "image":
-        "https://premierpet.com.br/wp-content/uploads/2020/11/racao-golden-formula-caes-filhote-carne-arroz.png"
-    },
+      "stock": 5},
     {
       "id":6,
       "titulo": "Ração Cães Sênior",
       "preco": 89.80,
       "texto": "Rações para cães com mais de 7 anos. Sabor carne",
       "categoria": "Cachorro",
-      "stock": 5,
-      "image":
-        "https://premierpet.com.br/wp-content/webp-express/webp-images/uploads/2020/11/racao-golden-formula-caes-senior-frango-arroz.png.webp"
-    },
+      "stock": 5 },
     {
       "id":7,
       "titulo": "Ração Cães Adultos",
       "preco": 129.90,
       "texto": "Ração super premium para cães de porte grande e gigante",
       "categoria": "Cachorro",
-      "stock": 5,
-      "image":
-        "https://premierpet.com.br/wp-content/webp-express/webp-images/uploads/2020/11/racao-premier-formula-caes-adulto-porte-grande-gigante-carne.png.webp"
-    },
+      "stock": 5},
     {
       "id": 8,
       "titulo": "Ração Filhotes",
       "preco": 109.90,
       "texto": "Ração super premium para cães em fase de crescimento, porte médio. Sabor frango",
-      "categoria": "Gatos",
-      "image": "https://premierpet.com.br/wp-content/webp-express/webp-images/uploads/2020/11/racao-premier-formula-caes-filhote-porte-medio-frango.png.webp"       
-    }
+      "categoria": "Gatos"}
   ],
   "categorias": [
     {
