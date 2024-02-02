@@ -37,7 +37,6 @@ function App() {
             <Route path="/finalizarCompra" element={<FinalizarCompra />} />
           </Routes>
         </CartProvider>
-        <Footer />
       </BrowserRouter>
     </>
   );

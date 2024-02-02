@@ -3,4 +3,5 @@
     margin-top: 261px;
     position: absolute;
     justify-content: space-around;
+    flex-direction: column;
 }

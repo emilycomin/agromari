@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { ItemContext } from "../Contexts/ItemContext";
 //estilos
 import styles from "./ItemList.module.css";
 //componentes
@@ -6,26 +7,27 @@ import ItemCard from "./ItemCard";
 import Loading from "../Loading/Loading";
 //Firebase
 import { getFirestore, getDoc, doc } from "firebase/firestore";
+import { useParams } from "react-router-dom";
 
 function ItemList() {
+  const { id } = useParams;
   const [itens, setItens] = useState([]);
-  const getItem = () => {
-    var getProdutos = {
-      method: "GET",
-      redirect: "follow",
-    };
+  const [loading, setLoading] = useState(true);
 
-    fetch("https://my-json-server.typicode.com/emilycomin/agromari/produtos")
-      .then((response) => response.json())
-      .then((data) => setItens(data))
-      .catch((error) => console.log("error", error));
-  };
   useEffect(() => {
-    getItem();
+    fetch("https://my-json-server.typicode.com/emilycomin/agromari/produtos", {
+      method: "GET",
+      headers: { "Content-type": "applecation/json" },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setItens(data);
+      })
+      .catch((error) => console.log("error", error));
+
     setLoading(false);
   }, []);
 
-  const [loading, setLoading] = useState(true);
   // // faz um state para salvar o dados pegos do fierbase
   // const [products, setProducts] = useState([]);
 

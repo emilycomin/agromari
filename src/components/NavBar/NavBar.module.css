@@ -56,7 +56,7 @@ a {
 .cartButton{
     position: relative;
     border: none;
-    background-color: transparent;
+    background-color: #fff;
 }
 .cartStatus{
     background-color: var(--yellow-green);
@@ -80,7 +80,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
+    background-color:#fff;
     z-index: 1;
     position: fixed;
 }

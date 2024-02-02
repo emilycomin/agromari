@@ -1,42 +1,39 @@
-import ItemDetail from "./ItemDetail";
-import ItemFilter from "../ItemFilter/ItemFilter";
+//React
+import { useState, useEffect, useContext } from "react";
+import { CartContext } from "../Contexts/CartContext";
+//estilo
 import styles from "./ItemDetailContainer.module.css";
+//componentes
+import Loading from "../Loading/Loading";
+import ItemDetail from "./ItemDetail";
+//react dom
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
 
 export default function ItemDetailContainer() {
   const { id } = useParams();
   const [produto, setProduto] = useState([]);
 
-  const getItem = () => {
-    var getProdutos = {
-      method: "GET",
-      redirect: "follow",
-    };
-
-    fetch("https://my-json-server.typicode.com/emilycomin/agromari/produtos")
-      .then((response) => response.json())
-      .then((data) => setProduto(data))
-      .catch((error) => console.log("error", error));
-  };
-
   useEffect(() => {
-    getItem();
-    setProduto(
-      produto.filter((item) => {
-        return item.id === id;
+    fetch(
+      `https://my-json-server.typicode.com/emilycomin/agromari/produtos/${id}`,
+      {
+        method: "GET",
+        headers: { "Content-type": "applecation/json" },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setProduto(data);
       })
-    );
+      .catch((error) => console.log("error", error));
   }, [id]);
 
   return (
     <div className={styles.detailContent}>
-      {/* <ItemFilter /> */}
-
       {produto.length === 0 ? (
-        console.log("error")
+        <Loading />
       ) : (
-        <ItemDetail item={produto[id]} />
+        <ItemDetail item={produto} key={produto.id} />
       )}
     </div>
   );

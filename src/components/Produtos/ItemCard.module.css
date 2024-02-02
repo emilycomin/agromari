@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    margin: 20px;
+    margin: 10px;
 }
 .cardContainer >a {
     text-decoration: none;
@@ -11,7 +11,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 16px 2px, rgba(205, 205, 207, 0.34) 0px 4px 7px -1px, rgba(205, 205, 207, 0.34) 0px 1px 0px inset;
 }
 .card{
-    width: 200px;
+    width: 218px;
     height: 260px;
     background-color: #f5f3e08f;
     border-radius: 10px;
@@ -47,7 +47,7 @@ h4{
 .buyButtons{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
 }
 a > .detailItemButton{
     width: 100%;
@@ -56,7 +56,7 @@ a > .detailItemButton{
     background-color: var(--yellow-green);
     border-radius: 5px;
     color: var(--dark-slate-gray);
-    width: 9rem;
+    width: 20%;
     height: 2rem;
     font-size: 14px;
     border: none;
@@ -68,7 +68,7 @@ a > .detailItemButton{
     box-shadow: rgba(118, 118, 118, 0.502) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.cardButtonBuy> span{
+.cardButtonBuy > span{
     position: absolute;
     right: 0px;
     top: -10px;

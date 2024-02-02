@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import styles from "./ItemCard.module.css";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ButtonText from "../ButtonText/ButtonText";
 import FormatCurrency from "../utils/FormatCurrency";
 import { CartContext } from "../Contexts/CartContext";
 import { BsBasket } from "react-icons/bs";
 
 export default function Item({ item }) {
-  const { id, image, titulo, preco, texto } = item;
   const { cartItems, setCartItems } = useContext(CartContext);
+  const { preco, titulo, image, id } = item;
 
   function handleAddOnCart() {
     setCartItems([...cartItems, item]);
@@ -23,8 +23,8 @@ export default function Item({ item }) {
         </Link>
         <div className={styles.cardBody}>
           <h5 className="cardTitle">{titulo}</h5>
-          <h4>{preco}</h4>
-          <p className="cardText">{texto}</p>
+          <h4>{FormatCurrency(preco)}</h4>
+          {/* <p className="cardText">{texto}</p> */}
           <div className={styles.buyButtons}>
             <Link to={`/produtos/${id}`}>
               <ButtonText

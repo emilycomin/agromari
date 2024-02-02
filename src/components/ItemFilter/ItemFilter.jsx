@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { ItemContext } from "../Contexts/ItemContext";
 import styles from "./ItemFilter.module.css";
 //componentes
 import ButtonText from "../ButtonText/ButtonText";
@@ -13,36 +14,30 @@ import {
 import { Database } from "@phosphor-icons/react";
 
 export default function Search() {
-  const [searchValue, setSearchValeu] = useState("");
   const [categoria, setCategoria] = useState([]);
+  const [produto, setProduto] = useState([]);
 
-  // useEffect(() => {
-  //API JSONPLaceholder
-  // fetch("https://my-json-server.typicode.com/emilycomin/agromari/categorias")
-  //   .then((response) => response.json())
-  //   .then((data) => setCategoria(data))
-  //   .catch((error) => console.log(error));
-
-  //firebase
-  //   const database = getFirestore();
-  //   const produtosFiltrados = collection(
-  //     "produtos",
-  //     where("categoria", "==", { searchValue })
-  //   );
-  //   getDoc(produtosFiltrados).then((snapshot) => {
-  //     console.log(produtosFiltrados);
-  //   });
-  // }, []);
+  useEffect(() => {
+    //API JSONPLaceholder
+    fetch("https://my-json-server.typicode.com/emilycomin/agromari/categorias")
+      .then((response) => response.json())
+      .then((data) => setCategoria(data))
+      .catch((error) => console.log(error));
+  }, [categoria]);
 
   function handleSearch(e) {
     e.preventDefault();
-    console.log(searchValue);
+    setCategoria(
+      categoria.filter((item) => {
+        return item.categoria === produto.categoria;
+      })
+    );
   }
 
   return (
     <aside className={styles.asideContent}>
-      <form onSubmit={handleSearch}>
-        <input
+      <form className={styles.formAside}>
+        {/* <input
           type="text"
           //passamos o value como o estado do react para o input ser controlado pelo react e não mais pelo html
           value={searchValue}
@@ -50,14 +45,14 @@ export default function Search() {
           className="inputSearch"
           onChange={({ target }) => setSearchValeu(target.value)}
           required
-        />
+        /> */}
 
         <select
           name="categorias"
           placeholder="Selecione a Categoria"
           options={categoria}
         >
-          <option value="" selected>
+          <option value={categoria.id} selected>
             Selecione uma opção
           </option>
           {categoria.map((categorias) => (
@@ -67,7 +62,7 @@ export default function Search() {
           ))}
         </select>
 
-        <ButtonText texto="pesquisar" />
+        <ButtonText texto="pesquisar" event={handleSearch} />
       </form>
     </aside>
   );
