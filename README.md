@@ -8,6 +8,7 @@
 
 <p>A Agromari é uma petshop real e esse projeto simula suas vendas online!</p>
 
+Projeto realizado para a conclusão do curso de React na [Coderhouse](https://coderhouse.com.br)<br>
 ✔️ Criado com [Creat-React-App](https://creat-react-app.dev) com JavaScript, <br>
 ✔️ Estilos em Css. <br>
 ✔️ Mobile First. <br>
