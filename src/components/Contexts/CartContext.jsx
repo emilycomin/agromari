@@ -9,6 +9,7 @@ export const CartProvider = ({ children }) => {
   const [isCartVisible, setIsCartVisible] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const [count, setCount] = useState(1);
+
   //variaves dos estados que serão mostrados em outros componentes
   const value = {
     cartItems,

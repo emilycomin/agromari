@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./ItemCard.module.css";
 import { Link, useParams } from "react-router-dom";
 import ButtonText from "../ButtonText/ButtonText";
@@ -7,11 +7,13 @@ import { CartContext } from "../Contexts/CartContext";
 import { BsBasket } from "react-icons/bs";
 
 export default function Item({ item }) {
-  const { cartItems, setCartItems } = useContext(CartContext);
+  const { cartItems, setCartItems, isCartVisible, setIsCartVisible } =
+    useContext(CartContext);
   const { preco, titulo, image, id } = item;
 
   function handleAddOnCart() {
     setCartItems([...cartItems, item]);
+    localStorage.setItem("cartItens", JSON.stringify(cartItems));
   }
 
   return (

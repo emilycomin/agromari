@@ -1,13 +1,11 @@
 .finalizarCompraContainer{
     display: flex;
-    position: absolute;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
+    gap: 25px;
     margin: 261px 26px;
 }
 .finalizarComprasContent {
     background-color: #f7f7f7;
-    width: 850px;
     display: flex;
     flex-direction: column;
     padding: 15px;
@@ -17,10 +15,8 @@
     width: 250px;
     display: flex;
     background-color: #f7f7f7;
-    justify-content: flex-star;
     padding-left: 8px;
     gap: 30px;
     align-items: center;
-    position: fixed;
     right: 100px;
 }

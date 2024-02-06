@@ -10,6 +10,7 @@ export default function ItemCount(item) {
       setCount(count + 1);
     }
   }
+
   function tirarProduto(e) {
     if (count > 1) {
       setCount(count - 1);

@@ -1,6 +1,5 @@
 //React
 import { useState, useEffect, useContext } from "react";
-import { CartContext } from "../Contexts/CartContext";
 //estilo
 import styles from "./ItemDetailContainer.module.css";
 //componentes
@@ -28,6 +27,7 @@ export default function ItemDetailContainer() {
       .catch((error) => console.log("error", error));
   }, [id]);
 
+  console.log(produto.categoria);
   return (
     <div className={styles.detailContent}>
       {produto.length === 0 ? (

@@ -1,6 +1,6 @@
 import styles from "./ItemDetail.module.css";
 import ItemCount from "../ItemCount/ItemCount";
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { CartContext } from "../Contexts/CartContext";
 import FormatCurrency from "../utils/FormatCurrency";
 import { BsBasket } from "react-icons/bs";
@@ -12,6 +12,7 @@ export default function ItemDetail({ item }) {
 
   function handleAddOnCart() {
     setCartItems([...cartItems, item]);
+    localStorage.setItem("cartItens", JSON.stringify(cartItems));
   }
 
   return (
@@ -27,12 +28,10 @@ export default function ItemDetail({ item }) {
         <h3 className={styles.itemPreco}>{FormatCurrency(preco)}</h3>
         <div className={styles.buyButtons}>
           <ItemCount initial={1} stock={stock} />
-          {/* <Link to="/carrinho"> */}
           <button className={styles.cardButtonBuy} onClick={handleAddOnCart}>
             Adicionar ao carrinho <BsBasket size={20} />
             <span>+</span>
           </button>
-          {/* </Link> */}
         </div>
       </div>
     </div>

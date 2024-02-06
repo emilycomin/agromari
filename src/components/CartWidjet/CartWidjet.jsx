@@ -19,6 +19,8 @@ export default function CartWidjet({ count }) {
 
   const total = cartItems.reduce((acc, items) => items.preco + acc, 0);
   const totalPrice = total * count;
+  //pegando dados do local storage
+  const cartItensLocalStorage = JSON.parse(localStorage.getItem("cartItens"));
 
   return (
     <div className={`cartContent ${isCartVisible ? "cartContentVisible" : ""}`}>
@@ -26,13 +28,14 @@ export default function CartWidjet({ count }) {
         <button onClick={() => setIsCartVisible(!isCartVisible)}>
           <FaArrowLeftLong size={25} />
         </button>
+        {count}
         CARRINHO DE COMPRAS
       </div>
       <hr />
       <div className="cartContentItem">
         {/* identificando se o carrinho está vazio ou não */}
-        {/* quando não estiver vazio, passando os dados do array por map.  */}
-        {cartItems.length === 0 ? (
+        {/* quando não estiver vazio, passando os dados do array por map.*/}
+        {cartItensLocalStorage === null ? (
           <p>
             <FaRegFaceSadCry /> <br />
             Seu carrinho está vazio
@@ -53,7 +56,7 @@ export default function CartWidjet({ count }) {
           texto={"Continuar Comprando"}
           event={() => setIsCartVisible(!isCartVisible)}
         />
-        <Link to="/finalizarCompra">
+        <Link to="/cart">
           <ButtonText
             texto={"Finalizar Compra"}
             event={() => setIsCartVisible(!isCartVisible)}

@@ -1,5 +1,4 @@
-import { useContext, useEffect, useState } from "react";
-import { ItemContext } from "../Contexts/ItemContext";
+import { useEffect, useState } from "react";
 //estilos
 import styles from "./ItemList.module.css";
 //componentes

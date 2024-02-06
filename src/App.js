@@ -11,6 +11,7 @@ import { CartProvider } from "./components/Contexts/CartContext";
 //componentes
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import ItemFilter from "./components/ItemFilter/ItemFilter";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/Produtos/ItemDetailContainer";
 import Contato from "./components/Contato/Contato";
@@ -31,10 +32,14 @@ function App() {
             <Route path="/" element={<PaginaInicial />} />
             <Route path="/produtos" element={<ItemListContainer />} />
             <Route path="/produtos/:id" element={<ItemDetailContainer />} />
+            <Route
+              path="/produtos/:categoria"
+              element={<ItemListContainer />}
+            />
             <Route path="/login" element={<LogIn />} />
             <Route path="/paginaDeContato" element={<Contato />} />
             <Route path="*" element={<PageNotFound />} />
-            <Route path="/finalizarCompra" element={<FinalizarCompra />} />
+            <Route path="/cart" element={<FinalizarCompra />} />
           </Routes>
         </CartProvider>
       </BrowserRouter>

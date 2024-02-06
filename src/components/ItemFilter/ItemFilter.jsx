@@ -1,8 +1,9 @@
 import { useEffect, useState, useContext } from "react";
-import { ItemContext } from "../Contexts/ItemContext";
+import { Link, useParams } from "react-router-dom";
 import styles from "./ItemFilter.module.css";
 //componentes
 import ButtonText from "../ButtonText/ButtonText";
+import ItemCard from "../Produtos/ItemCard";
 //firebase
 import {
   getDoc,
@@ -14,55 +15,39 @@ import {
 import { Database } from "@phosphor-icons/react";
 
 export default function Search() {
-  const [categoria, setCategoria] = useState([]);
-  const [produto, setProduto] = useState([]);
+  const { categoria } = useParams;
+
+  //armazena os dados da API
+  const [produtos, setProdutos] = useState([]);
+  //armazena os dados dos filtros estipulado
+  const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
-    //API JSONPLaceholder
-    fetch("https://my-json-server.typicode.com/emilycomin/agromari/categorias")
+    fetch(
+      `https://my-json-server.typicode.com/emilycomin/agromari/produtos/${categoria}`
+    )
       .then((response) => response.json())
-      .then((data) => setCategoria(data))
-      .catch((error) => console.log(error));
+      .then((data) => setProdutos(data))
+      .catch((error) => console.log("error", error));
   }, [categoria]);
 
   function handleSearch(e) {
     e.preventDefault();
-    setCategoria(
-      categoria.filter((item) => {
-        return item.categoria === produto.categoria;
-      })
-    );
+    console.log(`Pesquisando categorias de ${categoria}`);
   }
+  //o item ele tem uma categoria
+  // o db.json tem categorias para escolhas
+  // então quando o selecionado a categorias igual a categoria do item mostra essas opções
 
   return (
     <aside className={styles.asideContent}>
       <form className={styles.formAside}>
-        {/* <input
-          type="text"
-          //passamos o value como o estado do react para o input ser controlado pelo react e não mais pelo html
-          value={searchValue}
-          placeholder="digite aqui"
-          className="inputSearch"
-          onChange={({ target }) => setSearchValeu(target.value)}
-          required
-        /> */}
-
-        <select
-          name="categorias"
-          placeholder="Selecione a Categoria"
-          options={categoria}
-        >
-          <option value={categoria.id} selected>
-            Selecione uma opção
-          </option>
-          {categoria.map((categorias) => (
-            <option value={categorias.id} key={categorias.id}>
-              {categorias.name}
-            </option>
-          ))}
-        </select>
-
-        <ButtonText texto="pesquisar" event={handleSearch} />
+        <Link to={`/categorias/${categoria}`}>
+          <button onClick={handleSearch}>Rações para Gatos</button>
+        </Link>
+        <Link to={`/categorias/${categoria}`}>
+          <button onClick={handleSearch}>Rações para Cachorros</button>
+        </Link>
       </form>
     </aside>
   );

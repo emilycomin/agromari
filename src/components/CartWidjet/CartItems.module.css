@@ -9,13 +9,17 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
     border-bottom: 1px solid rgb(226, 224, 224);
-    padding-bottom: 5px;
-    padding-top: 8px;
+    padding-bottom: 15px;
+    padding-top: 18px;
 }
 .tituloCart > h2 {
     font-size: 1rem;
     font-weight: 500;
+}
+.tituloCart > h3 {
+    font-size: 1.25rem;
 }
 
 .itemCartInfo > img {
@@ -32,25 +36,12 @@ svg {
 }
 .botoesCarrinho{
     display: flex;
-    flex-direction: row;
-}
-.botoesCarrinho > input {
-    height:40px;
-    width: 50px;
-    padding: 0.25rem 0.75rem;
-    position: absolute;
-    border: 1px solid #c1bfbf;
-}
-.plusMinusButton{
-    display: flex;
     flex-direction: column;
-
+    margin: 20px 34px 0 0;
 }
-.plusMinusButton >button{
-    height: 20px;
-    left: 34px;
-    position: relative;
-    width: 16px;
-    background-color: transparent;
-    border: 1px solid #c1bfbf;
+
+.cartRemoveItem {
+    position: absolute;
+    top: 5px;
+    right: 0;
 }
