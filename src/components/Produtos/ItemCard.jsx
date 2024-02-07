@@ -5,6 +5,7 @@ import ButtonText from "../ButtonText/ButtonText";
 import FormatCurrency from "../utils/FormatCurrency";
 import { CartContext } from "../Contexts/CartContext";
 import { BsBasket } from "react-icons/bs";
+import Swal from "sweetalert2";
 
 export default function Item({ item }) {
   const { cartItems, setCartItems, isCartVisible, setIsCartVisible } =
@@ -14,6 +15,12 @@ export default function Item({ item }) {
   function handleAddOnCart() {
     setCartItems([...cartItems, item]);
     localStorage.setItem("cartItens", JSON.stringify(cartItems));
+    Swal.fire({
+      title: "Produto adicionado ao carrinho",
+      icon: "success",
+      timer: 1000,
+      showConfirmButton: false,
+    });
   }
 
   return (

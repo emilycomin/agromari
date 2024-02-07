@@ -3,7 +3,6 @@
     flex-direction: row;
     justify-content: center;
     margin: 178px 40px;
-    position: absolute;
     padding: 30px;
 }
 .itemDetailContent >img {
@@ -47,3 +46,4 @@
     font-weight: 700;
     font-size: 1.25rem;
 }
+

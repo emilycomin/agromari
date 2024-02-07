@@ -12,11 +12,16 @@
     
 }
 .resumoCompra{
-    width: 250px;
+    
     display: flex;
     background-color: #f7f7f7;
     padding-left: 8px;
     gap: 30px;
     align-items: center;
     right: 100px;
+    flex-direction:
+}
+.dadosCliente{
+    display:flex;
+    flex-direction: row;
 }

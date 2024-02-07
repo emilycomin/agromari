@@ -15,7 +15,7 @@ import {
 import { Database } from "@phosphor-icons/react";
 
 export default function Search() {
-  const { categoria } = useParams;
+  const { categorias } = useParams;
 
   //armazena os dados da API
   const [produtos, setProdutos] = useState([]);
@@ -23,18 +23,23 @@ export default function Search() {
   const [searchValue, setSearchValue] = useState("");
 
   useEffect(() => {
-    fetch(
-      `https://my-json-server.typicode.com/emilycomin/agromari/produtos/${categoria}`
-    )
+    fetch("https://my-json-server.typicode.com/emilycomin/agromari/produtos/")
       .then((response) => response.json())
-      .then((data) => setProdutos(data))
+      .then((data) => {
+        setProdutos(data);
+      })
       .catch((error) => console.log("error", error));
-  }, [categoria]);
+  }, [categorias]);
 
-  function handleSearch(e) {
-    e.preventDefault();
-    console.log(`Pesquisando categorias de ${categoria}`);
-  }
+  useEffect(() => {
+    const filtro = setProdutos(
+      categorias
+        ? produtos.filter((item) => {
+            return item.categoria === categorias;
+          })
+        : produtos
+    );
+  }, [categorias]);
   //o item ele tem uma categoria
   // o db.json tem categorias para escolhas
   // então quando o selecionado a categorias igual a categoria do item mostra essas opções
@@ -42,13 +47,13 @@ export default function Search() {
   return (
     <aside className={styles.asideContent}>
       <form className={styles.formAside}>
-        <Link to={`/categorias/${categoria}`}>
-          <button onClick={handleSearch}>Rações para Gatos</button>
-        </Link>
-        <Link to={`/categorias/${categoria}`}>
-          <button onClick={handleSearch}>Rações para Cachorros</button>
-        </Link>
+        <Link to={`/categorias/${categorias}`}>Rações para Cachorros</Link>
+        <Link to={`/categorias/${categorias}`}>Rações para Gatos</Link>
       </form>
+
+      {/* {produtos.map((produto) => {
+        return <ItemCard item={produto} key={produto.id} />;
+      })} */}
     </aside>
   );
 }

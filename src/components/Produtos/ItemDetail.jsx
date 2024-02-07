@@ -4,6 +4,9 @@ import { useContext } from "react";
 import { CartContext } from "../Contexts/CartContext";
 import FormatCurrency from "../utils/FormatCurrency";
 import { BsBasket } from "react-icons/bs";
+import Swal from "sweetalert2";
+import ButtonText from "../ButtonText/ButtonText";
+import { Link } from "react-router-dom";
 
 export default function ItemDetail({ item }) {
   const { preco, titulo, image, texto, stock } = item;
@@ -13,10 +16,19 @@ export default function ItemDetail({ item }) {
   function handleAddOnCart() {
     setCartItems([...cartItems, item]);
     localStorage.setItem("cartItens", JSON.stringify(cartItems));
+    Swal.fire({
+      title: "Produto adicionado ao carrinho",
+      icon: "success",
+      timer: 1000,
+      showConfirmButton: false,
+    });
   }
 
   return (
     <div className={styles.itemDetailContent}>
+      <Link to="/produtos">
+        <ButtonText texto={"Voltar"} className={styles.botaoVoltar} />
+      </Link>
       <img src={image} />
       <div className={styles.itemInfo}>
         <h2 className={styles.itemTitulo}>{titulo}</h2>

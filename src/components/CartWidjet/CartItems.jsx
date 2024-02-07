@@ -4,6 +4,7 @@ import FormatCurrency from "../utils/FormatCurrency";
 import { useContext, useState } from "react";
 import { CartContext } from "../Contexts/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
+import Swal from "sweetalert2";
 
 //aqui é o array dos items dentro do carrinho
 export default function CartItems({ item }) {
@@ -12,11 +13,19 @@ export default function CartItems({ item }) {
 
   function handdleRemoveItem() {
     const removeItem = cartItems.filter((item) => item.id != id);
-    setCartItems(removeItem);
-  }
-
-  function handdleClickValue(e) {
-    console.log(e);
+    if (cartItems.length == 1) {
+      localStorage.clear();
+      setCartItems(removeItem);
+    } else {
+      setCartItems(removeItem);
+    }
+    console.log(cartItems.length);
+    Swal.fire({
+      title: "Produto excluido com sucesso",
+      icon: "success",
+      timer: 1000,
+      showConfirmButton: false,
+    });
   }
 
   return (
@@ -32,7 +41,6 @@ export default function CartItems({ item }) {
           className={styles.cartRemoveItem}
           onClick={handdleRemoveItem}
         />
-        <ItemCount initial={1} stock={stock} onChange={handdleClickValue} />
       </div>
     </div>
   );

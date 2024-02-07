@@ -14,11 +14,11 @@ import { Link } from "react-router-dom";
 //estrutura e funções do carrinho que mostra o array de itens
 export default function CartWidjet({ count }) {
   //pegando os dados do context
-  const { cartItems, setCartItems, isCartVisible, setIsCartVisible } =
+  const { cartItems, isCartVisible, setIsCartVisible } =
     useContext(CartContext);
 
   const total = cartItems.reduce((acc, items) => items.preco + acc, 0);
-  const totalPrice = total * count;
+
   //pegando dados do local storage
   const cartItensLocalStorage = JSON.parse(localStorage.getItem("cartItens"));
 
@@ -49,7 +49,7 @@ export default function CartWidjet({ count }) {
       <div className="cartResume">
         <h4>Valor Total: </h4>
         {/* chamando a função criada para formatar os valores */}
-        <span>{FormatCurrency(totalPrice)}</span>
+        <span>{FormatCurrency(total)}</span>
       </div>
       <div className="cartButton">
         <ButtonText
