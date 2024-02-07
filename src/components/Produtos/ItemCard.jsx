@@ -6,6 +6,7 @@ import FormatCurrency from "../utils/FormatCurrency";
 import { CartContext } from "../Contexts/CartContext";
 import { BsBasket } from "react-icons/bs";
 import Swal from "sweetalert2";
+import * as Tooltip from "@radix-ui/react-tooltip";
 
 export default function Item({ item }) {
   const { cartItems, setCartItems, isCartVisible, setIsCartVisible } =
@@ -41,10 +42,29 @@ export default function Item({ item }) {
                 className={styles.detailItemButton}
               />
             </Link>
-            <button className={styles.cardButtonBuy} onClick={handleAddOnCart}>
-              <BsBasket />
-              <span>+</span>
-            </button>
+            <Tooltip.Provider>
+              {/* tooltip do Radix */}
+              <Tooltip.Root>
+                <Tooltip.Trigger asChild>
+                  <button
+                    className={styles.cardButtonBuy}
+                    onClick={handleAddOnCart}
+                  >
+                    <BsBasket />
+                    <span>+</span>
+                  </button>
+                </Tooltip.Trigger>
+                <Tooltip.Portal>
+                  <Tooltip.Content
+                    className={styles.tooltipContent}
+                    sideOffset={5}
+                  >
+                    Adicionar ao carrinho
+                    <Tooltip.Arrow className={styles.tooltipArrow} />
+                  </Tooltip.Content>
+                </Tooltip.Portal>
+              </Tooltip.Root>
+            </Tooltip.Provider>
           </div>
         </div>
       </div>

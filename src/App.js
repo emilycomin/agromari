@@ -10,8 +10,6 @@ import {
 import { CartProvider } from "./components/Contexts/CartContext";
 //componentes
 import NavBar from "./components/NavBar/NavBar";
-import Footer from "./components/Footer/Footer";
-import ItemFilter from "./components/ItemFilter/ItemFilter";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/Produtos/ItemDetailContainer";
 import Contato from "./components/Contato/Contato";
