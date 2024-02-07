@@ -2,7 +2,7 @@
   "produtos": [
     {
       "id": 1,
-      "titulo": "Ração cat Castrados",
+      "titulo": "Ração Gatos Castrados",
       "preco": 59.90,
       "texto": "Pacote de 1kg para gatos castrados sabor peixe",
       "categoria": "cat",
@@ -19,12 +19,12 @@
       "image": "https://firebasestorage.googleapis.com/v0/b/agromari-653c6.appspot.com/o/c%C3%A3esPortePequeno.png?alt=media&token=8a2af923-71a6-4da4-a9b2-b312218d16a6"},
     {
       "id": 3,
-      "titulo": "Ração cat filhotes",
+      "titulo": "Ração Gato filhotes",
       "preco": 99.90,
       "texto": "Ração premium para gatos em fase de crescimento. Pacote de 3kg. Sabor frango",
       "categoria": "cat",
       "stock": 7,
-      "image": "https://cobasi.vteximg.com.br/arquivos/ids/1041755-1000-1000/Golden-formula-caes-filhotes-15-kg.jpg?v=638122539036270000"
+      "image": "https://firebasestorage.googleapis.com/v0/b/agromari-653c6.appspot.com/o/gatosFilhotes.png?alt=media&token=677f9d1e-007c-439a-822c-0947dc96a421"
     },
     {
       "id": 4,
@@ -61,14 +61,6 @@
       "image": "https://firebasestorage.googleapis.com/v0/b/agromari-653c6.appspot.com/o/0002.jpg?alt=media&token=5adcb1ad-0885-4055-9253-427f155e2028"},
     {
       "id": 8,
-      "titulo": "Ração Gatos Filhotes",
-      "preco": 109.90,
-      "texto": "Ração super premium para cães em fase de crescimento, porte médio. Sabor frango",
-      "categoria": "cat",
-      "image": "https://firebasestorage.googleapis.com/v0/b/agromari-653c6.appspot.com/o/gatosFilhotes.png?alt=media&token=677f9d1e-007c-439a-822c-0947dc96a421"
-  },
-    {
-      "id": 9,
       "titulo": "Ração Gato Peixe",
       "preco": 45.90,
       "texto": "Ração super premium para cães em fase de crescimento, porte médio. Sabor frango",
