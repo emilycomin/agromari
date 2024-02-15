@@ -11,7 +11,6 @@ function ItemList() {
   const { categoria } = useParams();
   const [itens, setItens] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [filtro, setFiltro] = useState([]);
 
   useEffect(() => {
     fetch("https://my-json-server.typicode.com/emilycomin/agromari/produtos/", {
@@ -25,17 +24,36 @@ function ItemList() {
       .catch((error) => console.log("error", error));
 
     setLoading(false);
-  }, []);
+  }, [categoria]);
 
+  function produtosFiltrados() {
+    setItens(
+      categoria
+        ? itens.filter((item) => {
+            return item.categoria === categoria;
+          })
+        : itens
+    );
+  }
   // no retorno usei um if ternário para: se o estado loading for true ele mostra o componente loading se for false
   //mostra o array de produtos
   return loading ? (
     <Loading />
   ) : (
     <div className={styles.productContainer}>
-      {itens.map((item) => {
-        return <ItemCard item={item} key={item.id} />;
-      })}
+      <aside className={styles.asideContent}>
+        <Link to="/categoria/dog">
+          <button onClick={produtosFiltrados}>Rações para Cachorro</button>
+        </Link>
+        <Link to="/categoria/cat">
+          <button onClick={produtosFiltrados}>Rações para Gatos</button>
+        </Link>
+      </aside>
+      <div className={styles.productContent}>
+        {itens.map((item) => {
+          return <ItemCard item={item} key={item.id} />;
+        })}
+      </div>
     </div>
   );
 }

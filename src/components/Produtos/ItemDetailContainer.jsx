@@ -26,6 +26,7 @@ export default function ItemDetailContainer() {
       })
       .catch((error) => console.log("error", error));
   }, [id]);
+  console.log(produto);
 
   return (
     <div className={styles.detailContent}>
