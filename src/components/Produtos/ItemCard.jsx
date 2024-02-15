@@ -1,16 +1,21 @@
+//React
 import React, { useContext, useEffect } from "react";
+import { CartContext } from "../Contexts/CartContext";
+//Estilos
 import styles from "./ItemCard.module.css";
-import { Link, useParams } from "react-router-dom";
+//React Router
+import { Link } from "react-router-dom";
+//Componentes
 import ButtonText from "../ButtonText/ButtonText";
 import FormatCurrency from "../utils/FormatCurrency";
-import { CartContext } from "../Contexts/CartContext";
+//Icones
 import { BsBasket } from "react-icons/bs";
+//bibliotecas
 import Swal from "sweetalert2";
 import * as Tooltip from "@radix-ui/react-tooltip";
 
 export default function Item({ item }) {
-  const { cartItems, setCartItems, isCartVisible, setIsCartVisible } =
-    useContext(CartContext);
+  const { cartItems, setCartItems } = useContext(CartContext);
   const { preco, titulo, image, id } = item;
 
   function handleAddOnCart() {

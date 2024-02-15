@@ -15,45 +15,46 @@ import {
 import { Database } from "@phosphor-icons/react";
 
 export default function Search() {
-  const { categorias } = useParams;
-
+  const { categoria } = useParams;
   //armazena os dados da API
-  const [produtos, setProdutos] = useState([]);
+  const [filtro, setFiltro] = useState([]);
+
   //armazena os dados dos filtros estipulado
-  const [searchValue, setSearchValue] = useState("");
+  function produtosFiltrados() {
+    setFiltro(
+      filtro.filter((item) => {
+        return item.categoria === categoria;
+      })
+    );
+  }
 
   useEffect(() => {
-    fetch("https://my-json-server.typicode.com/emilycomin/agromari/produtos/")
+    fetch(
+      `https://my-json-server.typicode.com/emilycomin/agromari/produtos/${categoria}`,
+      {
+        method: "GET",
+        headers: { "Content-type": "applecation/json" },
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
-        setProdutos(data);
+        setFiltro(data);
       })
       .catch((error) => console.log("error", error));
-  }, [categorias]);
-
-  useEffect(() => {
-    const filtro = setProdutos(
-      categorias
-        ? produtos.filter((item) => {
-            return item.categoria === categorias;
-          })
-        : produtos
-    );
-  }, [categorias]);
+  }, [categoria]);
+  console.log(filtro);
   //o item ele tem uma categoria
   // o db.json tem categorias para escolhas
   // então quando o selecionado a categorias igual a categoria do item mostra essas opções
 
   return (
     <aside className={styles.asideContent}>
-      <form className={styles.formAside}>
-        <Link to={`/categorias/${categorias}`}>Rações para Cachorros</Link>
-        <Link to={`/categorias/${categorias}`}>Rações para Gatos</Link>
-      </form>
-
-      {/* {produtos.map((produto) => {
-        return <ItemCard item={produto} key={produto.id} />;
-      })} */}
+      <Link to="/categoria/dog">
+        <button onClick={produtosFiltrados}>Rações para Cachorro</button>
+      </Link>
+      <Link to="/categoria/cat">
+        <button onClick={produtosFiltrados}>Rações para Gatos</button>
+      </Link>
     </aside>
   );
 }
