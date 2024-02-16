@@ -5,10 +5,11 @@ import { useContext } from "react";
 import { CartContext } from "../Contexts/CartContext";
 import CartWidjet from "../CartWidjet/CartWidjet";
 import Logo from "../../img/logos/AGROm.jpg";
-import { Phone } from "@phosphor-icons/react";
+import { PiPhoneCall } from "react-icons/pi";
 import { BsBasket } from "react-icons/bs";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { Button } from "@radix-ui/themes";
+import { IoIosArrowDown } from "react-icons/io";
 
 export default function NavBar() {
   //pegando informação do array de produtos do context
@@ -20,10 +21,11 @@ export default function NavBar() {
       <Link to="/">
         <div className={styles.navBarHeader}>
           <img src={Logo} />
-          <h3 className="telInfo">
-            <Phone size={38} color="#e98719" />
-            (51) 33248-0377
-          </h3>
+
+          <div className={styles.telInfo}>
+            <PiPhoneCall size={32} color="#e98719" />
+            <h3>(51) 33248-0377</h3>
+          </div>
         </div>
       </Link>
       <nav className={styles.navBar}>
@@ -31,20 +33,29 @@ export default function NavBar() {
           <div className={styles.blanck}></div>
           <div className={styles.links}>
             <Link to="/">Home</Link>
-
-            <DropdownMenu.Root>
+            <Link to="/produtos">Produtos</Link>
+            {/* <DropdownMenu.Root>
               <DropdownMenu.Trigger className="bg-slate-100">
-                <Button variant="soft">
+                <Button variant="surface">
                   Produtos
-                  {/* <CaretDownIcon /> */}
+                  <IoIosArrowDown size={10} />
                 </Button>
               </DropdownMenu.Trigger>
+
               <DropdownMenu.Content>
-                <DropdownMenu.Item>Rações para Gatos</DropdownMenu.Item>
-                <DropdownMenu.Item>Rações para Cachorro</DropdownMenu.Item>
+                <Link to="/produtos">
+                  <DropdownMenu.Item>Todos os Produtos</DropdownMenu.Item>
+                </Link>
+                <DropdownMenu.Separator />
+                <Link to="/categoria/cat">
+                  <DropdownMenu.Item>Rações para Gatos</DropdownMenu.Item>
+                </Link>
+                <Link to="/categoria/dog">
+                  <DropdownMenu.Item>Rações para Cachorro</DropdownMenu.Item>
+                </Link>
                 <DropdownMenu.Separator />
               </DropdownMenu.Content>
-            </DropdownMenu.Root>
+            </DropdownMenu.Root> */}
             <Link to="/paginaDeContato">Contato</Link>
           </div>
           <div className={styles.icons}>

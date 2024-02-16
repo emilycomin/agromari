@@ -4,12 +4,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 240px  auto 0;
+    margin: 218px  auto 0;
     padding: 12px;
     border-radius: 8px;
    width: 440px;
-   
-   box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px, hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+   box-shadow: rgba(14, 18, 22, 0.35) 0px 10px 38px -10px, rgba(14, 18, 22, 0.2) 0px 10px 20px -15px;
 }
 h2{
     font-weight: 700;
@@ -59,12 +58,11 @@ label{
     margin: 22px 15px;
     padding: 10px;
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     transition: all 0.03s ease;
 }
 .loginButton:hover{
-    font-weight: 700;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-}
+    box-shadow: rgba(0, 0, 0, 0.108) 0px 3px 25px 3px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;}
 
 .loginLinks{
     display: flex;

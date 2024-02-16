@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 //estilos
 import styles from "./ItemList.module.css";
+//Icones
+import { LuCat, LuDog } from "react-icons/lu";
 //componentes
 import ItemCard from "./ItemCard";
 import Loading from "../Loading/Loading";
@@ -41,15 +43,24 @@ function ItemList() {
     <Loading />
   ) : (
     <div className={styles.productContainer}>
-      {/* <aside className={styles.asideContent}>
-        <h1>Escolha sua categoria</h1>
-        
-          <button onClick={produtosFiltrados}>Rações para Cachorro</button>
+      <aside className={styles.asideContent}>
+        <h1>Filtros:</h1>
+        <Link to="/categoria/dog">
+          <button onClick={produtosFiltrados}>
+            <LuDog />
+            Cachorro
+          </button>
         </Link>
-      
-          <button onClick={produtosFiltrados}>Rações para Gatos</button>
+        <Link to="/categoria/cat">
+          <button onClick={produtosFiltrados}>
+            <LuCat />
+            Gatos
+          </button>
         </Link>
-      </aside> */}
+        <Link to="/produtos">
+          <button>Limpar Filtros</button>
+        </Link>
+      </aside>
       <div className={styles.productContent}>
         {itens.map((item) => {
           return <ItemCard item={item} key={item.id} />;

@@ -1,7 +1,16 @@
 .listContainer {
     display: flex;
+    margin-top: 195px;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 768px)
+{.listContainer {
+    display: flex;
     margin-top: 261px;
     position: absolute;
     justify-content: space-around;
     flex-direction: column;
+}
 }
