@@ -7,6 +7,8 @@ import CartWidjet from "../CartWidjet/CartWidjet";
 import Logo from "../../img/logos/AGROm.jpg";
 import { Phone } from "@phosphor-icons/react";
 import { BsBasket } from "react-icons/bs";
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
+import { Button } from "@radix-ui/themes";
 
 export default function NavBar() {
   //pegando informação do array de produtos do context
@@ -29,7 +31,20 @@ export default function NavBar() {
           <div className={styles.blanck}></div>
           <div className={styles.links}>
             <Link to="/">Home</Link>
-            <Link to="/produtos">Produtos</Link>
+
+            <DropdownMenu.Root>
+              <DropdownMenu.Trigger className="bg-slate-100">
+                <Button variant="soft">
+                  Produtos
+                  {/* <CaretDownIcon /> */}
+                </Button>
+              </DropdownMenu.Trigger>
+              <DropdownMenu.Content>
+                <DropdownMenu.Item>Rações para Gatos</DropdownMenu.Item>
+                <DropdownMenu.Item>Rações para Cachorro</DropdownMenu.Item>
+                <DropdownMenu.Separator />
+              </DropdownMenu.Content>
+            </DropdownMenu.Root>
             <Link to="/paginaDeContato">Contato</Link>
           </div>
           <div className={styles.icons}>

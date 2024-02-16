@@ -1,6 +1,6 @@
 import "./global.css";
 //React
-import { useEffect, useState } from "react";
+
 import {
   BrowserRouter,
   Routes,
