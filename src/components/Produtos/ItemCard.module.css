@@ -77,7 +77,7 @@ button {
   }
 }
 
-/* CSS do card */
+/* --------------------------------------------------------------------------------------CSS do card */
 .cardContainer{
     display: flex;
     flex-direction: row;
@@ -133,25 +133,22 @@ a > .detailItemButton{
     width: 100%;
 }
 .cardButtonBuy{
-    background-color: var(--yellow-green);
-    border-radius: 5px;
-    color: var(--dark-slate-gray);
-    width: 20%;
-    height: 2rem;
-    font-size: 14px;
-    border: none;
-    transition: 0.2s ease-out;
-    border: 1px solid var(--yellow-green);
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: var(--yellow-green);
+  border-radius: 5px;
+  color: var(--dark-slate-gray);
+  width: 20%;
+  height: 2rem;
+  font-size: 14px;
+  border: none;
+  transition: 0.2s ease-out;
+  border: 1px solid var(--yellow-green);
+  position: relative;
+  align-items: center;
 }
 .cardButtonBuy:hover{
     box-shadow: rgba(118, 118, 118, 0.502) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-}
-
-.cardButtonBuy > span{
-    position: absolute;
-    right: 0px;
-    top: -10px;
-    font-weight: 700;
-    font-size: 1.25rem;
 }

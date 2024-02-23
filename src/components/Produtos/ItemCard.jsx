@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import ButtonText from "../ButtonText/ButtonText";
 import FormatCurrency from "../utils/FormatCurrency";
 //Icones
-import { BsBasket } from "react-icons/bs";
+import { TbBasketPlus } from "react-icons/tb";
 //bibliotecas
 import Swal from "sweetalert2";
 import * as Tooltip from "@radix-ui/react-tooltip";
@@ -55,8 +55,7 @@ export default function Item({ item }) {
                     className={styles.cardButtonBuy}
                     onClick={handleAddOnCart}
                   >
-                    <BsBasket />
-                    <span>+</span>
+                    <TbBasketPlus />
                   </button>
                 </Tooltip.Trigger>
                 <Tooltip.Portal>
