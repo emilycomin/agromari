@@ -1,6 +1,6 @@
+import { Link } from "react-router-dom";
 import Styles from "./Login.module.css";
 import { MdOutlineAlternateEmail, MdPassword } from "react-icons/md";
-import ButtonText from "../ButtonText/ButtonText";
 
 export default function LogIn() {
   return (
@@ -21,7 +21,7 @@ export default function LogIn() {
         <button className={Styles.loginButton}>Login</button>
         <div className={Styles.loginLinks}>
           <a href="#">Esqueceu sua senha?</a>
-          <a href="#">Faça seu cadastro</a>
+          <Link to="/cadastro">Faça seu cadastro </Link>
         </div>
       </form>
     </div>

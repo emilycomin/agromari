@@ -26,7 +26,7 @@ export default function FinalizarCompra() {
       });
     } else {
       Swal.fire({
-        title: `Pedido encaminhado com sucesso! Anote o número do seu pedido: ${numeroDoPedido}`,
+        title: `Pedido nº ${numeroDoPedido} encaminhado com sucesso!`,
         icon: "success",
       });
       setCartItems([]);

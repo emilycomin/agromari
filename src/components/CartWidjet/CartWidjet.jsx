@@ -28,10 +28,8 @@ export default function CartWidjet({ count }) {
         <button onClick={() => setIsCartVisible(!isCartVisible)}>
           <FaArrowLeftLong size={25} />
         </button>
-        {count}
-        CARRINHO DE COMPRAS
+        <span>CARRINHO DE COMPRAS</span>
       </div>
-      <hr />
       <div className="cartContentItem">
         {/* identificando se o carrinho está vazio ou não */}
         {/* quando não estiver vazio, passando os dados do array por map.*/}
@@ -53,7 +51,7 @@ export default function CartWidjet({ count }) {
       </div>
       <div className="cartButton">
         <ButtonText
-          texto={"Continuar Comprando"}
+          texto={"Fechar carrinho"}
           event={() => setIsCartVisible(!isCartVisible)}
         />
         <Link to="/cart">

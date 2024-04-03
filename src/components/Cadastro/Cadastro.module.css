@@ -1,0 +1,69 @@
+
+.cadastroContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 218px  auto 0;
+    padding: 12px;
+    border-radius: 8px;
+   width: 440px;
+   box-shadow: rgba(14, 18, 22, 0.35) 0px 10px 38px -10px, rgba(14, 18, 22, 0.2) 0px 10px 20px -15px;
+}
+h2{
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "Nunito", sans-serif;
+}
+
+.cadastroForm{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 12px;
+}
+.cadastroInput{
+    display: flex;
+    flex-direction: column;
+    position: relative;  
+}
+label{
+    margin-top: 10px;
+}
+.cadastroForm input{
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    text-indent: 10px;
+    height: 2.5rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.cadastroForm input:hover{
+    border-color: #a4c735;
+}
+.cadastroForm input:focus{
+    border-color: #a4c735;
+    border: 2px solid #a4c735;
+}
+.cadastroForm svg{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.3rem;
+}
+.cadastroButton{
+    background-color: #a4c735;
+    color: #fff;
+    border-radius: 8px;
+    height: 30px;
+    margin: 22px 15px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    transition: all 0.03s ease;
+}
+.cadastroButton:hover{
+    box-shadow: rgba(0, 0, 0, 0.108) 0px 3px 25px 3px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;}
+
+

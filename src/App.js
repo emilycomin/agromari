@@ -17,6 +17,7 @@ import PageNotFound from "./components/PageNotFound/PageNotFound";
 import LogIn from "./components/Login/LogIn";
 import PaginaInicial from "./components/PaginaInicial/PaginaInicial";
 import FinalizarCompra from "./components/FinalizarCompra/FinalizarCompra";
+import Cadastro from "./components/Cadastro/Cadastro";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
               element={<ItemListContainer />}
             />
             <Route path="/login" element={<LogIn />} />
+            <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/paginaDeContato" element={<Contato />} />
             <Route path="*" element={<PageNotFound />} />
             <Route path="/cart" element={<FinalizarCompra />} />

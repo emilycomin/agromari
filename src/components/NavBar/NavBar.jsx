@@ -7,9 +7,6 @@ import CartWidjet from "../CartWidjet/CartWidjet";
 import Logo from "../../img/logos/AGROm.jpg";
 import { PiPhoneCall } from "react-icons/pi";
 import { BsBasket } from "react-icons/bs";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-import { Button } from "@radix-ui/themes";
-import { IoIosArrowDown } from "react-icons/io";
 
 export default function NavBar() {
   //pegando informação do array de produtos do context
