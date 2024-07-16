@@ -3,7 +3,7 @@
     justify-content: space-around;
     gap: 20px;
     background-color: var(--yellow-green100);
-    height: 100vh;
+
 }
 .homeConteiner > img{
     object-fit: cover;

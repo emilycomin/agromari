@@ -1,16 +1,23 @@
 import React from "react";
 import Styles from "./Footer.module.css";
-import { FaInstagram } from "react-icons/fa";
+import bandeirasCartoes from "../../img/bandeiras-3.png"
+import bandeirasCartaoBanri from '../../img/banricompras.png'
+import pix from  '../../img/pix.png'
 
 export default function Footer() {
   return (
-    <div>
-      Footer <FaInstagram />
-      <div className={Styles.creditoImagens}>
-        <a href="https://br.freepik.com/vetores-gratis/cao-shiba-inu-bonito-chorando-ilustracao-de-icone-de-vetor-de-desenhos-animados-conceito-de-icone-de-natureza-animal-isolado-plano_30924703.htm#query=cachorro%20triste&position=0&from_view=keyword&track=ais&uuid=d24ebb1d-2cb7-4245-ba34-be821bf40899">
-          Imagem de catalyststuff
-        </a>
-        no Freepik
+    <div className={Styles.footerContent}>
+      <div className={Styles.footerLeft}>
+      <p>Métodos de pagamento:</p>
+        <div className={Styles.bandeirasPagamento}>
+          <img src={bandeirasCartoes}/>
+          <img src={bandeirasCartaoBanri}/>
+          <img src={pix}/>
+        </div>
+      </div>
+      <div className={Styles.footerRigth}>
+      <p>Agro-Mari Ivonir Comin Comercio de Produtos Para Animais LTDA 13.396.586/0001-05 <br />
+      Todos os direitos reservados, 2024.</p>
       </div>
     </div>
   );

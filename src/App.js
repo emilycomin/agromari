@@ -18,6 +18,7 @@ import LogIn from "./components/Login/LogIn";
 import PaginaInicial from "./components/PaginaInicial/PaginaInicial";
 import FinalizarCompra from "./components/FinalizarCompra/FinalizarCompra";
 import Cadastro from "./components/Cadastro/Cadastro";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
             <Route path="/cart" element={<FinalizarCompra />} />
           </Routes>
         </CartProvider>
+        <Footer/>
       </BrowserRouter>
     </>
   );

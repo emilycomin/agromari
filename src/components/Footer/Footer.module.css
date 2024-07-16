@@ -1,5 +1,16 @@
-.creditoImagens{
+.footerContent{
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 0.75rem;
+}
+.footerRigth{
+    text-align: right;
+}
+.footerRigth p{
+    margin-bottom: 0;
+}
+.bandeirasPagamento img{
+    height: 30px;
 }
