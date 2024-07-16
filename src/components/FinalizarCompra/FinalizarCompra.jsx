@@ -72,6 +72,7 @@ export default function FinalizarCompra() {
             </form>
           </div>
         </div>
+        {/* validar se o nome e email estiver preenchido */}
         <ButtonText texto={"Enviar Pedido"} event={handdlePedido} />
       </div>
     </div>

@@ -18,7 +18,8 @@
     align-items: center;
 }
 @media only screen and (min-width: 768px)
-{.productContent{
+{
+    .productContent{
     display: flex;
     flex-direction: row;
     position: relative;

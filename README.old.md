@@ -1,2 +1,2 @@
 # agromari
-Trabalho para entrega final do curso React.JS na Coderhouse. 
+Trabalho para entrega final do curso ReactJS na Coderhouse. 

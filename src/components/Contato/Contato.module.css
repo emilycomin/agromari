@@ -1,0 +1,36 @@
+.contatoContent{
+    display: flex;
+    background-color: aqua;
+    gap: 20px;
+    margin-top: 100px;
+    padding: 30px;
+}
+.whatsAppButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.whatsAppButton p{
+    width: 50%;
+    text-align: justify;
+}
+.whatsAppButton button{
+    background-color: transparent;
+    border: none;
+    width: 100px;
+    bottom: 55px;
+    font-size: 4rem;
+    line-height: 13px;
+    padding: 10px;
+    border-radius: 10px;
+    border:1px solid var(--yellow-green100); box-shadow: 2px 2px 3px #c3c2c2;
+}
+.googleMaps{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 600px;
+    height: 450px;
+}

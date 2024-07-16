@@ -6,7 +6,7 @@ import ButtonText from "../ButtonText/ButtonText";
 import CartItems from "./CartItems";
 import FormatCurrency from "../utils/FormatCurrency";
 // icones
-import { FaArrowLeftLong } from "react-icons/fa6";
+import { IoCloseCircleOutline } from "react-icons/io5";
 import { FaRegFaceSadCry } from "react-icons/fa6";
 //React-Router
 import { Link } from "react-router-dom";
@@ -26,7 +26,7 @@ export default function CartWidjet({ count }) {
     <div className={`cartContent ${isCartVisible ? "cartContentVisible" : ""}`}>
       <div className="cartHeader-ahgrs">
         <button onClick={() => setIsCartVisible(!isCartVisible)}>
-          <FaArrowLeftLong size={25} />
+          <IoCloseCircleOutline/>
         </button>
         <span>CARRINHO DE COMPRAS</span>
       </div>
