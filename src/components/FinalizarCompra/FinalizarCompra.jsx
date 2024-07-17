@@ -48,29 +48,21 @@ export default function FinalizarCompra() {
         })}
       </div>
 
-      <div className={styles.resumoCompra}>
+      <div className={styles.dadosCompra}>
         <div className={styles.resumoCompraHeader}>
           <div className={styles.resumoComraContext}>
-            <p>Subtotal:</p>
-            <p>Frete:</p>
-            <p>Total:</p>
+            <p>Subtotal: {FormatCurrency(totalProdutos)}</p>
+            <p>Frete: {FormatCurrency(19.9)}</p>
+            <p>Total: {FormatCurrency(totalCarrinho)}</p>
           </div>
         </div>
-        <div className={styles.valoresContent}>
-          <p> {FormatCurrency(totalProdutos)} </p>
-          <p> {FormatCurrency(19.9)} </p>
-          <p> {FormatCurrency(totalCarrinho)}</p>
-        </div>
-
         <div className={styles.dadosCliente}>
-          <div className={styles.resumoComraContext}>
             <form>
               <label> Nome: </label>
               <input type="text" placeholder="Digite seu nome" />
-              <label> Nome: </label>
+              <label> E-mail: </label>
               <input type="email" placeholder="Digite seu e-mail" />
             </form>
-          </div>
         </div>
         {/* validar se o nome e email estiver preenchido */}
         <ButtonText texto={"Enviar Pedido"} event={handdlePedido} />

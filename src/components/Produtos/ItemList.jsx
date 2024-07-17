@@ -56,8 +56,8 @@ function ItemList() {
             <LuCat />
             Gatos
           </button>
-        </Link>
-        <Link to="/produtos">
+        </Link>     
+          <Link to="/produtos">
           <button>Limpar Filtros</button>
         </Link>
       </aside>

@@ -2,6 +2,8 @@ import Styles from './Servicos.module.css'
 import bathDog from '../../img/puppy-bath-time-stockcake.jpg'
 import taxiDog from '../../img/taxidog.jpg'
 import veterinary from '../../img/veterinarian-examining-dog.jpg'
+
+
 export default function Servicos() {
   return (
     <div className={Styles.servicosCards}>

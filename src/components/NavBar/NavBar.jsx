@@ -23,7 +23,6 @@ export default function NavBar() {
             <Link to="/">Home</Link>
             <Link to="/produtos">Produtos</Link>
             <Link to="/servicos">Serviços</Link>
-            <Link to="/veterinaria">Veterinária</Link>
             <Link to="/paginaDeContato">Contato</Link>
       </nav>
       <div className={styles.navBarIcons}>

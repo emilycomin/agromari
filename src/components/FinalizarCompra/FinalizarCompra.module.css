@@ -2,26 +2,22 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
-    margin: 261px 26px;
+    margin: 20px 26px;
 }
 .finalizarComprasContent {
     background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
     padding: 15px;
-    
 }
-.resumoCompra{
-    
+.dadosCompra{
     display: flex;
+    justify-content: space-around;
     background-color: #f7f7f7;
-    padding-left: 8px;
-    gap: 30px;
     align-items: center;
-    right: 100px;
-    flex-direction:
+    padding: 20px;
 }
-.dadosCliente{
+.dadosCliente form{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
 }
