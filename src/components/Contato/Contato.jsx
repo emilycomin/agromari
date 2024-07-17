@@ -1,4 +1,4 @@
-import styles from '../Cadastro/Cadastro.module.css'
+import styles from '../Contato/Contato.module.css'
 import { ImWhatsapp } from "react-icons/im";
 
 export default function Contato() {
@@ -17,9 +17,9 @@ export default function Contato() {
         </button>
 
         <h1>Horário de funcionamento:</h1>
-        <p>Segunda à Sexta: 9:00 até 19:00</p>
-        <p>Sábado: 9:00 até 17:00</p>
-        <p>Domingos e Feriados: Fechados </p>
+        <p>Segunda à Sexta: 9:00 até 19:00 <br />
+        Sábado: 9:00 até 17:00 <br />
+        Domingos e Feriados: Fechados </p>
       </div>
       <div className={styles.googleMaps}>
         <h1>Visite a nossa loja</h1>

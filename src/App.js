@@ -18,6 +18,7 @@ import LogIn from "./components/Login/LogIn";
 import PaginaInicial from "./components/PaginaInicial/PaginaInicial";
 import FinalizarCompra from "./components/FinalizarCompra/FinalizarCompra";
 import Cadastro from "./components/Cadastro/Cadastro";
+import Servicos from "./components/Servicos/Servicos"
 import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
             <Route path="/login" element={<LogIn />} />
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/paginaDeContato" element={<Contato />} />
+            <Route path="/servicos" element={<Servicos />} />
             <Route path="*" element={<PageNotFound />} />
             <Route path="/cart" element={<FinalizarCompra />} />
           </Routes>
