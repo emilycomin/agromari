@@ -3,10 +3,10 @@
     flex-direction: column;
     justify-content: flex-start;
 }
-NavLink{
+.itemDetailContent>a{
     width: 9rem;
 }
-.itemInfo{
+.itemInfoConteiner{
     display: flex;
     margin: 2rem .75rem;
 }
@@ -14,10 +14,42 @@ NavLink{
     display: flex;
     flex-direction:column;
 }
+.itemInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 img{
     width: 200px;
 }
 .buyButtons{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.buyButtom {
+    display: flex;
+    background-color: var(--yellow-green);
+    border-radius: 8px;
+    display: flex;
+    gap: 0.25rem;
+    justify-content: space-between;
+    padding: 1rem;
+}
+@media only screen and (min-width: 768px){
+    .itemDetailContent{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .itemInfoConteiner{
+        gap: 4rem;
+       justify-content: center;
+       margin-bottom: 2rem;
+    }
+    .itemInfoConteiner > img{
+        width: 320px;
+    }
+    .itemDescription{
+        justify-content: center;
+    }
 }

@@ -2,8 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 1.5rem;
     font-size: 0.75rem;
+    background-color: white;
 }
 .footerRigth{
     text-align: right;
@@ -11,6 +12,4 @@
 .footerRigth p{
     margin-bottom: 0;
 }
-.bandeirasPagamento img{
-    height: 30px;
-}
+

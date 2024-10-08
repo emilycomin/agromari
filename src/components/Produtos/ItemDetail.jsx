@@ -32,17 +32,24 @@ export default function ItemDetail({ item }) {
         <ButtonText icon={<IoIosArrowRoundBack />} texto={"Voltar"} />
       </NavLink>
 
-      <div className={styles.itemInfo}>
+      <div className={styles.itemInfoConteiner}>
         <img src={image} />
-        <div className={styles.itemDescription}>
-          <h2 className={styles.itemTitulo}>{titulo}</h2>
-          <h5> DESCRIÇÃO</h5>
-          <hr />
-          <p>{texto}</p>
-          <h3>{FormatCurrency(preco)}</h3>
-          
+        <div className={styles.itemInfo}>
+          <div className={styles.itemDescription}>
+            <h2 className={styles.itemTitulo}>{titulo}</h2>
+            <h5> DESCRIÇÃO</h5>
+            <hr />
+            <p>{texto}</p>
+            <h3>{FormatCurrency(preco)}</h3>
+          </div>
+          <div className={styles.buyButtons}>
+              <ItemCount initial={1} stock={stock} />
+              <button onClick={handleAddOnCart} className={styles.buyButtom}>
+                <MdAddShoppingCart />
+                Adicionar ao carrinho
+              </button>
+            </div>
         </div>
-        
       </div>
     </div>
   );
