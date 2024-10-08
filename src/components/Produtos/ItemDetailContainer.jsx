@@ -1,7 +1,5 @@
 //React
-import { useState, useEffect, useContext } from "react";
-//estilo
-import styles from "./ItemDetailContainer.module.css";
+import { useState, useEffect } from "react";
 //componentes
 import Loading from "../Loading/Loading";
 import ItemDetail from "./ItemDetail";
@@ -29,7 +27,7 @@ export default function ItemDetailContainer() {
   console.log(produto);
 
   return (
-    <div className={styles.detailContent}>
+    <div>
       {produto.length === 0 ? (
         <Loading />
       ) : (

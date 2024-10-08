@@ -1,6 +1,6 @@
 import styles from "../NavBar/NavBar.module.css";
 import LogInButton from "../Login/LogInButton";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../Contexts/CartContext";
 import CartWidjet from "../CartWidjet/CartWidjet";
@@ -14,26 +14,26 @@ export default function NavBar() {
 
   return (
     <div className={styles.container}>
-      <Link to="/">
+      <NavLink to="/">
         <div className={styles.navBarLogo}>
           <img src={Logo} />
         </div>
-      </Link>
+      </NavLink>
       <nav className={styles.navBar}>
-            <Link to="/">Home</Link>
-            <Link to="/produtos">Produtos</Link>
-            <Link to="/servicos">Serviços</Link>
-            <Link to="/paginaDeContato">Contato</Link>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/produtos">Produtos</NavLink>
+            <NavLink to="/servicos">Serviços</NavLink>
+            <NavLink to="/paginaDeContato">Contato</NavLink>
       </nav>
       <div className={styles.navBarIcons}>
-            <Link to="/login">
+            <NavLink to="/login">
               <LogInButton color="#a4c735" />
-            </Link>
+            </NavLink>
             <button
               className={styles.cartButton}
               onClick={() => setIsCartVisible(!isCartVisible)}
             >
-              <BsBasket size={40} color="#a4c735" />
+              <BsBasket size={32} color="#a4c735" />
               {/* integrando informaçãoes e mostrando o comprimento do array */}
               {/* apenas mostrar valor se o tamanho do array for maior que 0, adicionando a propriedade de estilo cartStatus */}
               {cartItems.length > 0 && (

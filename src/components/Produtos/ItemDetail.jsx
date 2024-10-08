@@ -3,10 +3,12 @@ import ItemCount from "../ItemCount/ItemCount";
 import { useContext } from "react";
 import { CartContext } from "../Contexts/CartContext";
 import FormatCurrency from "../utils/FormatCurrency";
-import { BsBasket } from "react-icons/bs";
+import { MdAddShoppingCart } from "react-icons/md";
+import { IoIosArrowRoundBack } from "react-icons/io";
 import Swal from "sweetalert2";
+
+import { NavLink } from "react-router-dom";
 import ButtonText from "../ButtonText/ButtonText";
-import { Link } from "react-router-dom";
 
 export default function ItemDetail({ item }) {
   const { preco, titulo, image, texto, stock } = item;
@@ -26,25 +28,21 @@ export default function ItemDetail({ item }) {
 
   return (
     <div className={styles.itemDetailContent}>
-      <Link to="/produtos">
-        <ButtonText texto={"Voltar"} className={styles.botaoVoltar} />
-      </Link>
-      <img src={image} />
+      <NavLink to="/produtos">
+        <ButtonText icon={<IoIosArrowRoundBack />} texto={"Voltar"} />
+      </NavLink>
+
       <div className={styles.itemInfo}>
-        <h2 className={styles.itemTitulo}>{titulo}</h2>
+        <img src={image} />
         <div className={styles.itemDescription}>
+          <h2 className={styles.itemTitulo}>{titulo}</h2>
           <h5> DESCRIÇÃO</h5>
           <hr />
           <p>{texto}</p>
+          <h3>{FormatCurrency(preco)}</h3>
+          
         </div>
-        <h3 className={styles.itemPreco}>{FormatCurrency(preco)}</h3>
-        <div className={styles.buyButtons}>
-          <ItemCount initial={1} stock={stock} />
-          <button className={styles.cardButtonBuy} onClick={handleAddOnCart}>
-            Adicionar ao carrinho <BsBasket size={20} />
-            <span>+</span>
-          </button>
-        </div>
+        
       </div>
     </div>
   );

@@ -1,8 +1,11 @@
 .container{
     width: 100vw;
     background-color: var(--yellow-green100);
+    display: flex;
+    flex-direction: column;
     padding: 20px;
-    justify-content: space-around;
+    gap: 1.5rem;
+    align-items: center;
 }
 .navBarLogo{
     display: flex;
@@ -19,8 +22,11 @@
 .navBar a{
     color: var(--yellow-green);
     font-weight: 600;
-}
+    text-decoration: none;
 
+}a> .active{
+    color: red;    
+}
 .navBar > a:hover {
     color: #55880a;
     transition: all 0.2s ease;
@@ -32,7 +38,6 @@
 .navBarIcons svg{
     font-size: 2rem;
 }
-
 .cartButton{
     position: relative;
     border: none;
@@ -52,87 +57,10 @@
     justify-content: center;
     align-items: center;
 }
-
 @media only screen and (min-width: 768px)
 {
 .container{
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    height: ;
-}
-
-.navBarHeader > img{
-    width: 250px;
-}
-.navBarHeader {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #e98719;
-}
-
-.navBarContainer{
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    width: 100vw;
-    height: 50px;
-    justify-content: space-around;
-    background-color: #f7f7f7;
-
-}
-.blanck{
-    width: 7rem;
-}
-.icons{
-    width: 10%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-.links{
-    display: flex;
-    flex-direction: row;
-    width: 30%;
-    gap: 55px;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-}
-
-.links > a {
-    color:  var(--dark-slate-gray);
-    text-decoration: none;
-}
-.links > a:hover {
-    color: #a4c735;
-    border-bottom: 1.3px solid #396871;
-}
-
-a {
-    text-decoration: none;
-}
-
-.cartButton{
-    position: relative;
-    border: none;
-    background-color: transparent;
-}
-.cartStatus{
-    background-color: var(--yellow-green);
-    width: 1.50rem;
-    height: 1.50rem;
-    color: var(--dark-slate-gray);
-    position: absolute;
-    font-weight: 700;
-    top: 0;
-    right: -0.75rem;
-    font-size: 1rem;
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
 }
 }

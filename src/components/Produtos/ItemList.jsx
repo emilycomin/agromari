@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 //Router Router
-import { Link, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 //estilos
 import styles from "./ItemList.module.css";
 //Icones
 import { LuCat, LuDog } from "react-icons/lu";
+import { TbFilterCancel } from "react-icons/tb";
 //componentes
 import ItemCard from "./ItemCard";
 import Loading from "../Loading/Loading";
@@ -44,22 +45,25 @@ function ItemList() {
   ) : (
     <div className={styles.productContainer}>
       <aside className={styles.asideContent}>
-        <h1>Filtros:</h1>
-        <Link to="/categoria/dog">
+        <h1>Categorias</h1>
+        <NavLink to="/categoria/dog">
           <button onClick={produtosFiltrados}>
             <LuDog />
             Cachorro
           </button>
-        </Link>
-        <Link to="/categoria/cat">
+        </NavLink>
+        <NavLink to="/categoria/cat">
           <button onClick={produtosFiltrados}>
             <LuCat />
             Gatos
           </button>
-        </Link>     
-          <Link to="/produtos">
-          <button>Limpar Filtros</button>
-        </Link>
+        </NavLink>     
+          <NavLink to="/produtos">
+          <button>
+          <TbFilterCancel />
+          Limpar Filtros
+          </button>
+        </NavLink>
       </aside>
       <div className={styles.productContent}>
         {itens.map((item) => {

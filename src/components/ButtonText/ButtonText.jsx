@@ -1,8 +1,11 @@
 import styles from "./ButtonText.module.css";
-export default function ButtonText({ texto, event }) {
+
+export default function ButtonText({ texto, event, icon }) {
   return (
-    <button className={styles.cardButtonBuy} onClick={event}>
+    <button className={styles.cardButton} onClick={event}>
+      {icon}
       {texto}
+   
     </button>
   );
 }

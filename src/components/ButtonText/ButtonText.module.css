@@ -1,4 +1,4 @@
-.cardButtonBuy{
+.cardButton{
     background-color: var(--yellow-green);
     border-radius: 5px;
     color: var(--dark-slate-gray);
@@ -9,7 +9,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
-.cardButtonBuy:hover{
+.cardButton:hover{
     box-shadow: rgba(118, 118, 118, 0.502) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
