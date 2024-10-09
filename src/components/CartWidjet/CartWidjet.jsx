@@ -1,5 +1,5 @@
 import "./CartWidjet.css";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { CartContext } from "../Contexts/CartContext";
 //componentes
 import ButtonText from "../ButtonText/ButtonText";
@@ -9,19 +9,25 @@ import FormatCurrency from "../utils/FormatCurrency";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import { FaRegFaceSadCry } from "react-icons/fa6";
 //React-Router
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 //estrutura e funções do carrinho que mostra o array de itens
 export default function CartWidjet({ count }) {
   //pegando os dados do context
   const { cartItems, isCartVisible, setIsCartVisible } =
-    useContext(CartContext);
+  useContext(CartContext);
+  //pegando dados do local storage
+  const cartItensLocalStorage = JSON.parse(localStorage.getItem("cartItens"));
+  useEffect(() => {
+      console.log(cartItems);
+  }, [cartItensLocalStorage])
 
   const total = cartItems.reduce((acc, items) => items.preco + acc, 0);
 
-  //pegando dados do local storage
-  const cartItensLocalStorage = JSON.parse(localStorage.getItem("cartItens"));
-
+    
+   //verificando se o carrinho está vazio antes de finalizar a compra! 
+    //se o carrinho está vazio, direcionar para a página de profutos
+    //se tiver item redirecionar para a página de pagamento.
   return (
     <div className={`cartContent ${isCartVisible ? "cartContentVisible" : ""}`}>
       <div className="cartHeader-ahgrs">
@@ -54,12 +60,16 @@ export default function CartWidjet({ count }) {
           texto={"Fechar carrinho"}
           event={() => setIsCartVisible(!isCartVisible)}
         />
-        <Link to="/cart">
-          <ButtonText
-            texto={"Finalizar Compra"}
-            event={() => setIsCartVisible(!isCartVisible)}
-          />
-        </Link>
+        {/* carrinho vazio não pode ir para tela de finalizar comprassss */}
+         <NavLink to="/cart"> 
+         <button 
+            className="checkoutButton"  
+            disabled={!cartItensLocalStorage}
+            event={() => setIsCartVisible(!isCartVisible)} 
+            >
+              Finalizar Compra 
+          </button>
+      </NavLink>
       </div>
     </div>
   );

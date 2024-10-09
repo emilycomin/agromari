@@ -12,7 +12,7 @@ export default function ItemDetailContainer() {
 
   useEffect(() => {
     fetch(
-      `https://my-json-server.typicode.com/emilycomin/agromari/produtos/${id}`,
+      "https://my-json-server.typicode.com/emilycomin/agromari/produtos/",
       {
         method: "GET",
         headers: { "Content-type": "applecation/json" },

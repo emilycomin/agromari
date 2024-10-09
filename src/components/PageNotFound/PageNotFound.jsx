@@ -7,7 +7,7 @@ export default function PageNotFound() {
     <div className={styles.containerPageNotFound}>
       <img
         src={notFound}
-        alt="Gato chorando pela página não encontrada"
+        alt="Gato chorando por que a página não foi encontrada"
         style={{ height: "280px", width: "280px" }}
       />
       <h2>Oops, a página não existe</h2>

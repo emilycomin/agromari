@@ -2,7 +2,7 @@ import styles from "./ItemDetail.module.css";
 import ItemCount from "../ItemCount/ItemCount";
 import { useContext } from "react";
 import { CartContext } from "../Contexts/CartContext";
-import FormatCurrency from "../utils/FormatCurrency";
+
 import { MdAddShoppingCart } from "react-icons/md";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import Swal from "sweetalert2";
@@ -40,7 +40,7 @@ export default function ItemDetail({ item }) {
             <h5> DESCRIÇÃO</h5>
             <hr />
             <p>{texto}</p>
-            <h3>{FormatCurrency(preco)}</h3>
+            <h3>{preco}</h3>
           </div>
           <div className={styles.buyButtons}>
               <ItemCount initial={1} stock={stock} />

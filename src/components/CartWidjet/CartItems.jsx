@@ -19,7 +19,6 @@ export default function CartItems({ item }) {
     } else {
       setCartItems(removeItem);
     }
-    console.log(cartItems.length);
     Swal.fire({
       title: "Produto excluido com sucesso",
       icon: "success",
